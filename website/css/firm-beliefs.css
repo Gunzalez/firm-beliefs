@@ -1,0 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
+@media (max-width: 1200px) {
+  .container {
+    width: 100%; } }
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+  color: #FFFFFF; }
+
+select, input {
+  font-family: 'Ubuntu'; }
+
+p {
+  padding: 0;
+  margin: 0;
+  line-height: 150%; }
+
+body {
+  background-color: #363636; }

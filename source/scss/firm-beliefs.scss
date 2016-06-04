@@ -1,0 +1,40 @@
+$width-xs: 480px;
+$width-sm: 768px;
+$width-md: 992px;
+$width-lg: 1200px;
+
+$clr-primary-dark:      #363636;
+$clr-primary-orange:    #fc8037;
+
+@import "mixins";
+@import "fonts";
+
+@media (max-width: $width-lg){
+    .container {
+        width: 100%;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+select, input {
+    font-family: 'Ubuntu';
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    line-height: 150%;
+}
+
+body {
+    background-color: $clr-primary-dark;
+}
+
+
+

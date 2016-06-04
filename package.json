@@ -1,22 +1,31 @@
 {
-  "name": "firmbeliefs",
+  "name": "firm-beliefs",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Firm Beliefs website",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Segun Konibire",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gunzalez/firm-beliefs.git"
+  },
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gunzalez/firm-beliefs/issues"
+  },
+  "homepage": "https://github.com/Gunzalez/firm-beliefs#readme",
   "devDependencies": {
-    "browser-sync": "^2.12.5",
-    "del": "^2.2.0",
+    "browser-sync": "^2.12.10",
     "gulp": "^3.9.1",
-    "gulp-if": "^2.0.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
-    "gulp-sequence": "^0.4.5",
     "gulp-uglify": "^1.5.3",
-    "gulp-useref": "^3.1.0",
-    "run-sequence": "^1.2.1"
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0"
   }
 }
