@@ -5,6 +5,7 @@ $width-lg: 1200px;
 
 $clr-primary-dark:      #363636;
 $clr-primary-orange:    #fc8037;
+$clr-primary-grey:       #9e9e95;
 
 @import "mixins";
 @import "fonts";
@@ -35,6 +36,34 @@ p {
 body {
     background-color: $clr-primary-dark;
 }
+
+.page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    min-height: 900px;
+}
+
+.header {
+    background-color: $clr-primary-dark;
+    height: 440px;
+    color: $clr-primary-grey;
+
+    .container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+.hero {
+
+    img {
+        width: 100%;
+    }
+}
+
+
 
 
 

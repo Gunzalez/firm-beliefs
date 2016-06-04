@@ -17,8 +17,8 @@ gulp.task('jshint', function() {
 
 // configure sass task
 gulp.task('sass', function(){
-    return gulp.src('source/scss/**/*.scss')
-        .pipe(sass()) // Converts Sass to CSS with gulp-sass
+    return gulp.src('website/scss/**/*.scss')
+        .pipe(sass())
         .pipe(gulp.dest('website/css'))
         .pipe(browserSync.reload({
             stream: true
@@ -36,7 +36,7 @@ gulp.task('browserSync', function() {
 
 // watch changes to HTML, CSS and JS,
 gulp.task('watch', ['browserSync'], function (){
-    gulp.watch('source/scss/**/*.scss', ['sass']);
+    gulp.watch('website/scss/**/*.scss', ['sass']);
     gulp.watch('website/js/*.js', ['jshint']);
     gulp.watch('website/*.html', browserSync.reload);
 });
