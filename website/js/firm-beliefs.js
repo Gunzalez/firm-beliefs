@@ -13,16 +13,46 @@
 
     };
 
-    firmBeliefs.environment = {
-        resize: function () {
 
+
+    firmBeliefs.environment = {
+        // main navigation functionality
+        $mainNavContainer: $('.main-nav-container'),
+        $mainNavTrigger: $('.main-nav-trigger a'),
+        mainNavShow: function(){
+            this.$mainNavContainer.addClass('animated open');
+        },
+        mainNavHide: function(){
+            this.$mainNavContainer.removeClass('open');
+        },
+        mainNavResize: function(){
+            this.$mainNavContainer.removeClass('animated').height($('.page').height());
         },
 
-        init: function () {
-            var self = firmBeliefs;
+
+
+
+
+
+
+        resize: function () {
+            this.mainNavResize();
+        },
+
+        init: function (){
+            var self = this;
+
+            this.$mainNavTrigger.on('click', function(){
+                self.mainNavShow();
+            });
+
+            this.$mainNavContainer.on('mouseleave', function(){
+                self.mainNavHide();
+            });
 
             // window size
-            self.properties.windowWidth = $(window).width();
+            firmBeliefs.properties.windowWidth = $(window).width();
+            this.resize();
         }
     };
 
@@ -35,7 +65,7 @@
         $(window).on('resize', function () {
 
             var newWidth = $(window).width(),
-                    oldWidth = firmBeliefs.properties.windowWidth;
+                oldWidth = firmBeliefs.properties.windowWidth;
 
             if (oldWidth != newWidth) {
                 firmBeliefs.properties.windowWidth = newWidth;

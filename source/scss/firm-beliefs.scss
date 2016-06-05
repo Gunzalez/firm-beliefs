@@ -42,11 +42,17 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     background-color: #FFFFFF;
+    overflow: hidden;
+    height: 3000px;
 }
 
 .header {
     background-color: $clr-primary-dark;
     color: $clr-primary-grey;
+
+    .container {
+        position: relative;
+    }
 }
 
 h1 {
@@ -118,13 +124,31 @@ h1 {
 
 }
 
-.nav-container {
+.main-nav-container {
     position: absolute;
-    top: 100%;
-    width: 300px;
+    top: 0;
+    width: 310px;
     height: 600px;
-    right: 0;
-    background-color: $clr-primary-dark;
+    right: -325px;
+//    background-color: rgb(54, 54, 54);
+//    background-color: rgba(54, 54, 54, 0.80);
+    background-color: red;
+
+    @media (max-width: $width-lg){
+        right: -310px;
+    }
+
+    &.animated {
+        @include transitions(0.25s);
+    }
+
+    &.open {
+        right: -15px;
+
+        @media (max-width: $width-lg){
+            right: 0;
+        }
+    }
 }
 
 .h1-box {

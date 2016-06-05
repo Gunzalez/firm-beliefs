@@ -29,11 +29,15 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  overflow: hidden;
+  height: 3000px; }
 
 .header {
   background-color: #363636;
   color: #9e9e95; }
+  .header .container {
+    position: relative; }
 
 h1 {
   background: url("../images/logo-firm-beliefs.png") 0 0 no-repeat;
@@ -85,13 +89,26 @@ h1 {
     .main-nav-trigger a:hover {
       text-decoration: none; }
 
-.nav-container {
+.main-nav-container {
   position: absolute;
-  top: 100%;
-  width: 300px;
+  top: 0;
+  width: 310px;
   height: 600px;
-  right: 0;
-  background-color: #363636; }
+  right: -325px;
+  background-color: red; }
+  @media (max-width: 1200px) {
+    .main-nav-container {
+      right: -310px; } }
+  .main-nav-container.animated {
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s; }
+  .main-nav-container.open {
+    right: -15px; }
+    @media (max-width: 1200px) {
+      .main-nav-container.open {
+        right: 0; } }
 
 .h1-box {
   border-right: 8px solid #9e9e95;
