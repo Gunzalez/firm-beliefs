@@ -1,0 +1,145 @@
+$width-xs: 480px;
+$width-sm: 768px;
+$width-md: 992px;
+$width-lg: 1200px;
+
+$clr-primary-dark:      #363636;
+$clr-primary-orange:    #F48220;
+$clr-primary-grey:      #9e9e95;
+
+@import "mixins";
+@import "fonts";
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+select, input {
+    font-family: 'Ubuntu';
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    line-height: 150%;
+}
+
+@media (max-width: $width-lg){
+    .container {
+        width: 100%;
+    }
+}
+
+body {
+    background-color: $clr-primary-dark;
+}
+
+.page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
+.header {
+    background-color: $clr-primary-dark;
+    color: $clr-primary-grey;
+}
+
+h1 {
+    background: url("../images/logo-firm-beliefs.png") 0 0 no-repeat;
+    text-indent: -9000px;
+    width: 268px;
+    height: 36px;
+    background-size: cover;
+
+    a {
+        display: block;
+    }
+}
+
+.nav-box {
+    position: relative;
+    height: 82px;
+}
+
+.contact-nav {
+    @extend %cleanUl;
+    margin-left: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    li {
+        padding-top: 5px;
+    }
+
+    a {
+        color: $clr-primary-grey;
+        text-decoration: none;
+        font-size: 1.8rem;
+        line-height: 90%;
+        @include transitions(0.25s);
+
+        &:hover {
+            color: $clr-primary-orange;
+        }
+
+        &.tel {
+            background: url("../images/icon-plus.png") left center no-repeat;
+            padding-left: 20px;
+        }
+
+        &.email {
+            background: url("../images/icon-bars.png") left center no-repeat;
+            padding-left: 20px;
+        }
+    }
+}
+
+
+.main-nav-trigger {
+    position: absolute;
+    bottom: 3px;
+    right: 15px;
+
+    a {
+        background: url("../images/icon-horizontal-nav-bars.png") 0 0 no-repeat;
+        width: 42px;
+        height: 39px;
+        display: block;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+}
+
+.nav-container {
+    position: absolute;
+    top: 100%;
+    width: 300px;
+    height: 600px;
+    right: 0;
+    background-color: $clr-primary-dark;
+}
+
+.h1-box {
+    border-right: 8px solid $clr-primary-grey;
+    padding-top: 46px;
+}
+
+.hero {
+
+    img {
+        width: 100%;
+    }
+}
+
+
+
+
+

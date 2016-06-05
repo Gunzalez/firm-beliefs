@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
-@media (max-width: 1200px) {
-  .container {
-    width: 100%; } }
+.contact-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
 
 h1, h2, h3, h4, h5 {
   margin: 0;
@@ -17,6 +18,10 @@ p {
   margin: 0;
   line-height: 150%; }
 
+@media (max-width: 1200px) {
+  .container {
+    width: 100%; } }
+
 body {
   background-color: #363636; }
 
@@ -24,16 +29,73 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #FFFFFF;
-  min-height: 900px; }
+  background-color: #FFFFFF; }
 
 .header {
   background-color: #363636;
-  height: 440px;
   color: #9e9e95; }
-  .header .container {
-    padding-top: 30px;
-    padding-bottom: 30px; }
+
+h1 {
+  background: url("../images/logo-firm-beliefs.png") 0 0 no-repeat;
+  text-indent: -9000px;
+  width: 268px;
+  height: 36px;
+  background-size: cover; }
+  h1 a {
+    display: block; }
+
+.nav-box {
+  position: relative;
+  height: 82px; }
+
+.contact-nav {
+  margin-left: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+  .contact-nav li {
+    padding-top: 5px; }
+  .contact-nav a {
+    color: #9e9e95;
+    text-decoration: none;
+    font-size: 1.8rem;
+    line-height: 90%;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s; }
+    .contact-nav a:hover {
+      color: #F48220; }
+    .contact-nav a.tel {
+      background: url("../images/icon-plus.png") left center no-repeat;
+      padding-left: 20px; }
+    .contact-nav a.email {
+      background: url("../images/icon-bars.png") left center no-repeat;
+      padding-left: 20px; }
+
+.main-nav-trigger {
+  position: absolute;
+  bottom: 3px;
+  right: 15px; }
+  .main-nav-trigger a {
+    background: url("../images/icon-horizontal-nav-bars.png") 0 0 no-repeat;
+    width: 42px;
+    height: 39px;
+    display: block; }
+    .main-nav-trigger a:hover {
+      text-decoration: none; }
+
+.nav-container {
+  position: absolute;
+  top: 100%;
+  width: 300px;
+  height: 600px;
+  right: 0;
+  background-color: #363636; }
+
+.h1-box {
+  border-right: 8px solid #9e9e95;
+  padding-top: 46px; }
 
 .hero img {
   width: 100%; }
