@@ -36,7 +36,8 @@
         init: function (){
             var self = this;
 
-            this.$mainNavTrigger.on('click', function(){
+            this.$mainNavTrigger.on('click', function(evt){
+                evt.preventDefault();
                 self.mainNavShow();
             });
 

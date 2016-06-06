@@ -1,0 +1,6 @@
+Annoying dot on nav trigger
+Responsive everything
+Get fonts
+Delay carousel uni
+Until images are loaded
+mobile-only links
