@@ -1,3 +1,4 @@
 Initial set-up:                 3hrs
 Layout, Homepage                2hrs
 Homepage page, 5th June         3hrs
+Code refactor 6th June          2hrs
