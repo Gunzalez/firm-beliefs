@@ -13,8 +13,6 @@
 
     };
 
-
-
     firmBeliefs.environment = {
         // main navigation functionality
         $mainNavContainer: $('.main-nav-container'),
@@ -55,20 +53,61 @@
         $topLevelContainers: $('.top-level-container'),
         $topLevelNavHtml: $('.top-level-nav'),
         $triggers: $('.trigger', this.$topLevelNavHtml),
+        topLevelNavAutoScroll: true,
+        topLevelNavAutoDelay: 7000,
+        topLevelNavPaused: false,
+
+        autoScroll: function(){
+            var self = this;
+            var navTimer = setInterval(function(){
+                if(self.topLevelNavAutoScroll){
+                    if(!self.topLevelNavPaused){
+                        var curActive = self.$topLevelContainers.index($('.active')),
+                            total = self.$topLevelContainers.length;
+                        curActive++;
+                        if(curActive == total){
+                            curActive = 0
+                        }
+                        $('li', self.$topLevelNavHtml).removeClass('active');
+                        $('li', self.$topLevelNavHtml).eq(curActive).addClass('active');
+                        self.$topLevelContainers.removeClass('active');
+                        self.$topLevelContainers.eq(curActive).addClass('active');
+                    }
+                } else {
+                    clearInterval(navTimer);
+                }
+            }, this.topLevelNavAutoDelay);
+        },
+
         init: function(){
             var self = this;
-            this.$triggers.on('click', function(){
 
-                // highlight this row
+            // attach show/hide actions to triggers
+            this.$triggers.on('click', function(){
+                self.topLevelNavAutoScroll = false;
+
+                // highlight this element
                 var $listEl = $(this).parents('li');
                 $('li', self.$topLevelNavHtml).removeClass('active');
                 $listEl.addClass('active');
-                self.$topLevelContainers.removeClass('active');
 
                 // change corresponding image
+                self.$topLevelContainers.removeClass('active');
                 var index = $('li', self.$topLevelNavHtml).index($listEl);
                 self.$topLevelContainers.eq(index).addClass('active');
             });
+
+            // starts auto scroll is set to true
+            if(this.topLevelNavAutoScroll){
+                this.autoScroll();
+            }
+
+            // stop image swapping while user might be reading
+            self.$topLevelContainers.parents('.hero').on('mouseenter', function(){
+                self.topLevelNavPaused = true;
+            }).on('mouseleave', function(){
+                self.topLevelNavPaused = false;
+            })
         }
     };
 

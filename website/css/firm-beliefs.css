@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
-.contact-nav, .quick-intro .intro, .top-level-nav ul {
+.contact-nav, .quick-intro .intro, .top-level-nav ul, .our-team .team-navigation ul {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -87,9 +87,14 @@ h1 {
     background: url("../images/icon-horizontal-nav-bars.png") 0 0 no-repeat;
     width: 42px;
     height: 39px;
-    display: block; }
+    display: block;
+    text-decoration: none;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s; }
     .main-nav-trigger a:hover {
-      text-decoration: none; }
+      background: url("../images/icon-horizontal-nav-bars.png") -42px 0 no-repeat; }
 
 .main-nav-container {
   position: absolute;
@@ -146,10 +151,10 @@ h1 {
     top: 0;
     left: 0;
     opacity: 0;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all 0.75s;
+    -moz-transition: all 0.75s;
+    -o-transition: all 0.75s;
+    transition: all 0.75s;
     z-index: 1; }
     .hero .hero-image.active {
       opacity: 1;
@@ -239,6 +244,13 @@ h1 {
   background-color: #ebebeb;
   margin-top: -85px;
   padding-top: 120px; }
+  .our-team .member {
+    float: left;
+    display: none; }
+    .our-team .member.active {
+      display: block; }
+  .our-team .team-member-image image {
+    width: 100%; }
   .our-team h2 {
     font-size: 3.8rem;
     padding-bottom: 20px;
@@ -251,14 +263,38 @@ h1 {
     font-size: 1.6rem;
     line-height: 130%; }
   .our-team .team-skirt {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative;
+    margin-top: -38px;
     width: 100%;
     height: 38px;
     background: url("../images/team-skirt.png") bottom center no-repeat; }
   .our-team .container {
     position: relative; }
+  .our-team .team-navigation {
+    margin-top: -120px; }
+    .our-team .team-navigation ul {
+      margin-left: -5px; }
+    .our-team .team-navigation li {
+      display: inline;
+      padding: 0 5px; }
+    .our-team .team-navigation a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      background-color: #ffffff;
+      text-decoration: none; }
+      .our-team .team-navigation a:hover {
+        background-color: #9e9e95; }
+      .our-team .team-navigation a.active {
+        background-color: #F48220;
+        cursor: default; }
 
 .our-craft {
   height: 600px;
