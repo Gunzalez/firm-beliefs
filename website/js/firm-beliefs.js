@@ -51,7 +51,16 @@
 
     firmBeliefs.team = {
         $html: $('.our-team'),
-        $controls: $('.team-nav-controls a'),
+        $controls: $('.nav-controls a', this.$html),
+        $memberImages: $('.member-image', this.$html),
+        $memberDetails: $('.member-detail', this.$html),
+
+        displayMember: function(memberIndex){
+            this.$memberImages.removeClass('active');
+            this.$memberImages.eq(memberIndex).addClass('active');
+            this.$memberDetails.removeClass('active');
+            this.$memberDetails.eq(memberIndex).addClass('active');
+        },
 
         init: function(){
             var self = this;
@@ -61,12 +70,9 @@
                     if(!$(this).hasClass('active')){
                         // make this link only active
                         var index = self.$controls.index($(this));
+                        self.displayMember(index);
                         self.$controls.removeClass('active');
                         self.$controls.eq(index).addClass('active');
-
-                        // reflect the correct member
-                        $('.member', self.$html).removeClass('active');
-                        $('.member', self.$html).eq(index).addClass('active');
                     }
                 });
             }

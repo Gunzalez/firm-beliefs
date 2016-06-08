@@ -244,13 +244,28 @@ h1 {
   background-color: #ebebeb;
   margin-top: -85px;
   padding-top: 120px; }
-  .our-team .member {
-    float: left;
+  .our-team .team-member-images {
+    position: relative; }
+    .our-team .team-member-images img {
+      width: 100%;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      z-index: 1; }
+    .our-team .team-member-images .member-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      opacity: 0;
+      width: 100%; }
+      .our-team .team-member-images .member-image.active {
+        opacity: 1; }
+  .our-team .member-detail {
     display: none; }
-    .our-team .member.active {
+    .our-team .member-detail.active {
       display: block; }
-  .our-team .team-member-image image {
-    width: 100%; }
   .our-team h2 {
     font-size: 3.8rem;
     padding-bottom: 20px;
@@ -267,9 +282,12 @@ h1 {
     margin-top: -38px;
     width: 100%;
     height: 38px;
-    background: url("../images/team-skirt.png") bottom center no-repeat; }
+    background: url("../images/team-skirt.png") bottom center no-repeat;
+    z-index: 3; }
   .our-team .container {
     position: relative; }
+    .our-team .container.team-board {
+      overflow: hidden; }
   .our-team .team-navigation {
     margin-top: -120px; }
     .our-team .team-navigation ul {
