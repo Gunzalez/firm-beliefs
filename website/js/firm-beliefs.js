@@ -49,24 +49,47 @@
         }
     };
 
+    firmBeliefs.team = {
+        $html: $('.our-team'),
+        $controls: $('.team-nav-controls a'),
+
+        init: function(){
+            var self = this;
+            if(self.$html.length > 0){
+                self.$controls.on('click', function (evt) {
+                    evt.preventDefault();
+                    if(!$(this).hasClass('active')){
+                        // make this link only active
+                        var index = self.$controls.index($(this));
+                        self.$controls.removeClass('active');
+                        self.$controls.eq(index).addClass('active');
+
+                        // reflect the correct member
+                        $('.member', self.$html).removeClass('active');
+                        $('.member', self.$html).eq(index).addClass('active');
+                    }
+                });
+            }
+        }
+    };
+
     firmBeliefs.homePage = {
         $topLevelContainers: $('.top-level-container'),
         $topLevelNavHtml: $('.top-level-nav'),
         $triggers: $('.trigger', this.$topLevelNavHtml),
-        topLevelNavAutoScroll: true,
+        topLevelNavAutoScrollFlag: true,
         topLevelNavAutoDelay: 7000,
         topLevelNavPaused: false,
-
-        autoScroll: function(){
+        topLevelNavAutoScroll: function(){
             var self = this;
             var navTimer = setInterval(function(){
-                if(self.topLevelNavAutoScroll){
+                if(self.topLevelNavAutoScrollFlag){
                     if(!self.topLevelNavPaused){
                         var curActive = self.$topLevelContainers.index($('.active')),
                             total = self.$topLevelContainers.length;
                         curActive++;
                         if(curActive == total){
-                            curActive = 0
+                            curActive = 0;
                         }
                         $('li', self.$topLevelNavHtml).removeClass('active');
                         $('li', self.$topLevelNavHtml).eq(curActive).addClass('active');
@@ -84,7 +107,7 @@
 
             // attach show/hide actions to triggers
             this.$triggers.on('click', function(){
-                self.topLevelNavAutoScroll = false;
+                self.topLevelNavAutoScrollFlag = false;
 
                 // highlight this element
                 var $listEl = $(this).parents('li');
@@ -98,8 +121,8 @@
             });
 
             // starts auto scroll is set to true
-            if(this.topLevelNavAutoScroll){
-                this.autoScroll();
+            if(this.topLevelNavAutoScrollFlag){
+                this.topLevelNavAutoScroll();
             }
 
             // stop image swapping while user might be reading
@@ -107,7 +130,7 @@
                 self.topLevelNavPaused = true;
             }).on('mouseleave', function(){
                 self.topLevelNavPaused = false;
-            })
+            });
         }
     };
 
@@ -116,6 +139,7 @@
         // all init
         firmBeliefs.environment.init();
         firmBeliefs.homePage.init();
+        firmBeliefs.team.init();
 
         // resize triggers
         $(window).on('resize', function () {
