@@ -1,11 +1,15 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
-.contact-nav, .quick-intro .intro, .top-level-nav ul, .our-team .team-navigation ul {
+.contact-nav, .main-nav-container .main-nav, .quick-intro .intro, .top-level-nav ul, .our-team .team-navigation ul {
   margin: 0;
   padding: 0;
   list-style: none; }
 
 .text-clr-grey {
   color: #9e9e95 !important; }
+
+.underlined-text {
+  text-decoration: underline; }
 
 h1, h2, h3, h4, h5 {
   margin: 0;
@@ -25,7 +29,15 @@ body {
 p {
   padding: 0 0 12px 0;
   margin: 0;
-  line-height: 120%; }
+  line-height: 130%;
+  font-size: 1.6rem; }
+
+a {
+  color: #F48220;
+  text-decoration: none; }
+  a:hover {
+    color: #F48220;
+    text-decoration: underline; }
 
 @media (max-width: 1200px) {
   .container {
@@ -89,10 +101,11 @@ h1 {
     height: 39px;
     display: block;
     text-decoration: none;
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    -o-transition: all 0.25s;
-    transition: all 0.25s; }
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    outline: none; }
     .main-nav-trigger a:hover {
       background: url("../images/icon-horizontal-nav-bars.png") -42px 0 no-repeat; }
 
@@ -103,7 +116,8 @@ h1 {
   height: 600px;
   right: -325px;
   z-index: 10;
-  background-color: red; }
+  background-color: #363636;
+  background-color: rgba(54, 54, 54, 0.8); }
   @media (max-width: 1200px) {
     .main-nav-container {
       right: -310px; } }
@@ -127,8 +141,7 @@ h1 {
   float: left;
   width: 100%; }
   .quick-intro h2 {
-    font-size: 2.0em;
-    font-weight: 700;
+    font-size: 2.8rem;
     padding-bottom: 60px;
     color: #9e9e95; }
   .quick-intro .intro {
@@ -161,7 +174,7 @@ h1 {
       z-index: 2; }
   .hero img {
     width: 100%; }
-  .hero .hero-angle {
+  .hero .hero-angled-top {
     position: absolute;
     top: 0;
     left: 0;
@@ -225,9 +238,6 @@ h1 {
     cursor: pointer; }
     .top-level-nav h3:hover {
       text-decoration: underline; }
-  .top-level-nav p {
-    line-height: 130%;
-    font-size: 1.6rem; }
   .top-level-nav .more-link {
     text-transform: uppercase;
     font-weight: bold;
@@ -268,7 +278,7 @@ h1 {
       display: block; }
   .our-team h2 {
     font-size: 3.8rem;
-    padding-bottom: 20px;
+    padding: 20px 0;
     text-transform: uppercase; }
   .our-team h3 {
     font-size: 2.5em;
@@ -277,7 +287,7 @@ h1 {
   .our-team p {
     font-size: 1.6rem;
     line-height: 130%; }
-  .our-team .team-skirt {
+  .our-team .team-angled-bottom {
     position: relative;
     margin-top: -38px;
     width: 100%;
@@ -307,7 +317,8 @@ h1 {
       -o-transition: all 0.5s;
       transition: all 0.5s;
       background-color: #ffffff;
-      text-decoration: none; }
+      text-decoration: none;
+      outline: none; }
       .our-team .team-navigation a:hover {
         background-color: #9e9e95; }
       .our-team .team-navigation a.active {
@@ -315,9 +326,53 @@ h1 {
         cursor: default; }
 
 .our-craft {
-  height: 600px;
+  padding: 60px 0 30px 0;
   background-color: #ffffff; }
+  .our-craft .post-it {
+    position: relative; }
+  .our-craft .post-it-image {
+    width: 100%; }
+  .our-craft .post-detail {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 60px; }
+  .our-craft blockquote {
+    margin: 0;
+    padding: 30px;
+    quotes: "“" "”" "‘" "’";
+    border: none; }
+  .our-craft blockquote:before {
+    color: #363636;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em; }
+  .our-craft blockquote p {
+    display: inline;
+    font-size: 2.6rem; }
+  .our-craft blockquote footer {
+    padding-top: 10px;
+    display: block;
+    font-size: 1.6rem; }
+  .our-craft h2 {
+    font-size: 3.8rem;
+    padding-bottom: 20px;
+    text-transform: uppercase; }
+  .our-craft h3 {
+    font-size: 3.0rem;
+    padding-bottom: 20px; }
+
+.find-out-more {
+  background: url("../images/find-out-more-angled-top.png") top center no-repeat #ebebeb;
+  padding-top: 30px;
+  height: 660px; }
 
 .footer {
-  height: 250px;
-  background-color: #000000; }
+  background: url("../images/footer-angled-top.png") top center no-repeat;
+  padding-top: 82px;
+  margin-top: -82px;
+  height: 220px; }
