@@ -46,6 +46,10 @@
             // window size
             firmBeliefs.properties.windowWidth = $(window).width();
             this.resize();
+
+            $('body').on('click', '.stop-propagation', function(evt){
+                evt.stopPropagation();
+            });
         }
     };
 

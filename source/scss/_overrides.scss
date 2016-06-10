@@ -1,0 +1,16 @@
+
+
+.row {
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+.row > [class*='col-'] {
+    padding-right:20px;
+    padding-left:20px;
+}
+
+.form-control:focus, input {
+    box-shadow: none !important;
+    outline: none !important;
+}
