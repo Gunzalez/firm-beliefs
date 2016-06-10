@@ -9,8 +9,8 @@ $clr-primary-grey:      #9e9e95;
 $clr-primary-light:     #ebebeb;
 $clr-error:             #a94442;
 
-$fbHeaderFont:         "futura_condensedmedium";
-$fbBodyFont:           "Hind";
+$fbHeaderFont:         "FuturaCondensedMedium";
+$fbBodyFont:           "Helvetica";
 
 @import "overrides";
 @import "mixins";
@@ -20,6 +20,19 @@ body {
     background-color: $clr-primary-dark;
     font-family: $fbBodyFont;
     font-weight: 100;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    z-index: 100;
 }
 
 .text-clr-grey {
@@ -32,7 +45,7 @@ strong {
 
 .text-strong {
     color: #000000;
-    font-weight: bold;
+    font-weight: 100;
 }
 
 .underlined-text {
@@ -48,8 +61,9 @@ h1, h2, h3, h4, h5 {
 }
 
 h2 {
-    font-size: 5.2rem;
+    font-size: 4.6rem;
     padding-bottom: 40px;
+    letter-spacing: 3px;
 }
 
 h3, h4, h5 {
@@ -503,7 +517,7 @@ h1 {
     }
 
     blockquote {
-        font-family: Montserrat;
+        font-family: $fbBodyFont;
 
         p {
             display: inline;

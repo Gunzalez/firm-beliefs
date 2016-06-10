@@ -1,6 +1,5 @@
-Annoying dot on nav trigger
+# Annoying dot on nav trigger
 Responsive everything
-Get fonts
-Delay carousel uni
-Until images are loaded
+# Get fonts
+Delay carousel until images are loaded
 mobile-only links
