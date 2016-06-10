@@ -35,6 +35,20 @@ body:before {
     z-index: 100;
 }
 
+.fb-btn {
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    font-weight: 700;
+    color: $clr-primary-orange;
+    font-size: 1.6rem;
+    font-family: $fbBodyFont;
+
+    &:hover {
+        color: $clr-primary-orange;
+    }
+}
+
 .text-clr-grey {
     color: $clr-primary-grey !important;
 }
@@ -228,6 +242,7 @@ h1 {
     h2 {
         text-transform: uppercase;
         color: $clr-primary-grey;
+        padding-bottom: 77px;
     }
 
     strong {
@@ -642,13 +657,61 @@ h1 {
     }
 }
 
-.body {
+.trunk {
     padding-bottom: 82px;
     background: url('../images/footer-angled-top.png') bottom center no-repeat $clr-primary-light;
 }
 
 .footer {
-    height: 100px;
+    font-size: 1.2rem;
+    line-height: 100%;
+    padding: 30px 0;
+    margin-bottom: 50px;
+
+    background: url("../images/logo-firm-belief-small.png") right center no-repeat;
+
+    .footer-navigation {
+        @extend %cleanUL;
+        float: left;
+    }
+
+    li {
+        float: left;
+        padding: 0 15px;
+        border-right: 1px solid $clr-primary-orange;
+
+        &:nth-last-child(1){
+            border: none;
+        }
+    }
+
+    a {
+        display: block;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.shaker {
+    font-size: 1.2rem;
+    background: #ffffff;
+    text-align: center;
+    padding: 8px 0;
+
+    a {
+        background: url("../images/sugarshaker.png") 0 0 no-repeat;
+        padding-left: 20px;
+        display: inline-block;
+        margin-left: 3px;
+        color: $clr-primary-grey;
+
+        &:hover {
+            color: $clr-primary-orange;
+        }
+
+    }
 }
 
 

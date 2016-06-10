@@ -11,7 +11,7 @@
   box-shadow: none !important;
   outline: none !important; }
 
-.contact-nav, .main-nav-container .main-nav, .quick-intro .intro, .top-level-nav ul, .our-team .team-navigation ul {
+.contact-nav, .main-nav-container .main-nav, .quick-intro .intro, .top-level-nav ul, .our-team .team-navigation ul, .footer .footer-navigation {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -44,6 +44,17 @@ body:before {
   -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
   z-index: 100; }
+
+.fb-btn {
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  font-weight: 700;
+  color: #F48220;
+  font-size: 1.6rem;
+  font-family: "Helvetica"; }
+  .fb-btn:hover {
+    color: #F48220; }
 
 .text-clr-grey {
   color: #9e9e95 !important; }
@@ -196,7 +207,8 @@ h1 {
   width: 100%; }
   .quick-intro h2 {
     text-transform: uppercase;
-    color: #9e9e95; }
+    color: #9e9e95;
+    padding-bottom: 77px; }
   .quick-intro strong {
     text-transform: uppercase; }
   .quick-intro .intro {
@@ -485,9 +497,39 @@ h1 {
       padding: 2px 4px;
       line-height: 100%; } }
 
-.body {
+.trunk {
   padding-bottom: 82px;
   background: url("../images/footer-angled-top.png") bottom center no-repeat #ebebeb; }
 
 .footer {
-  height: 100px; }
+  font-size: 1.2rem;
+  line-height: 100%;
+  padding: 30px 0;
+  margin-bottom: 50px;
+  background: url("../images/logo-firm-belief-small.png") right center no-repeat; }
+  .footer .footer-navigation {
+    float: left; }
+  .footer li {
+    float: left;
+    padding: 0 15px;
+    border-right: 1px solid #F48220; }
+    .footer li:nth-last-child(1) {
+      border: none; }
+  .footer a {
+    display: block; }
+    .footer a:hover {
+      text-decoration: underline; }
+
+.shaker {
+  font-size: 1.2rem;
+  background: #ffffff;
+  text-align: center;
+  padding: 8px 0; }
+  .shaker a {
+    background: url("../images/sugarshaker.png") 0 0 no-repeat;
+    padding-left: 20px;
+    display: inline-block;
+    margin-left: 3px;
+    color: #9e9e95; }
+    .shaker a:hover {
+      color: #F48220; }
