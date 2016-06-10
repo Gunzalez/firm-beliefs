@@ -9,8 +9,8 @@ $clr-primary-grey:      #9e9e95;
 $clr-primary-light:     #ebebeb;
 $clr-error:             #a94442;
 
-
-$firmBeliefFonts:       "Hind";
+$fbHeaderFont:         "futura_condensedmedium";
+$fbBodyFont:           "Hind";
 
 @import "overrides";
 @import "mixins";
@@ -18,7 +18,7 @@ $firmBeliefFonts:       "Hind";
 
 body {
     background-color: $clr-primary-dark;
-    font-family: $firmBeliefFonts;
+    font-family: $fbBodyFont;
     font-weight: 100;
 }
 
@@ -43,12 +43,18 @@ h1, h2, h3, h4, h5 {
     margin: 0;
     padding: 0;
     line-height: 100%;
-    font-family: $firmBeliefFonts;
+    font-family: $fbHeaderFont;
     font-weight: 700;
+}
+
+h2 {
+    font-size: 5.2rem;
+    padding-bottom: 40px;
 }
 
 h3, h4, h5 {
     font-weight: 100;
+    font-family: $fbBodyFont;
 }
 
 .page {
@@ -206,8 +212,6 @@ h1 {
     width: 100%;
 
     h2 {
-        font-size: 3.8rem;
-        padding-bottom: 20px;
         text-transform: uppercase;
         color: $clr-primary-grey;
     }
@@ -336,7 +340,7 @@ h1 {
 
     h3 {
         padding-bottom: 15px;
-        font-size: 2.6rem;
+        font-size: 3.2rem;
         font-weight: 100;
         cursor: pointer;
         text-decoration: underline;
@@ -394,8 +398,7 @@ h1 {
     }
 
     h2 {
-        font-size: 3.8rem;
-        padding: 20px 0;
+        padding-top: 20px;
         text-transform: uppercase;
     }
 
@@ -540,8 +543,6 @@ h1 {
 
 
     h2 {
-        font-size: 3.8rem;
-        padding-bottom: 20px;
         text-transform: uppercase;
     }
 
@@ -557,8 +558,6 @@ h1 {
 
 
     h2 {
-        font-size: 3.8rem;
-        padding-bottom: 20px;
         text-transform: uppercase;
     }
 

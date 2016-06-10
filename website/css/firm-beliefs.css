@@ -19,6 +19,12 @@
   padding: 0;
   list-style: none; }
 
+@font-face {
+  font-family: 'futura_condensedmedium';
+  src: url("fonts/futura_condensed_medium-webfont.woff2") format("woff2"), url("fonts/futura_condensed_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   background-color: #363636;
   font-family: "Hind";
@@ -41,11 +47,16 @@ h1, h2, h3, h4, h5 {
   margin: 0;
   padding: 0;
   line-height: 100%;
-  font-family: "Hind";
+  font-family: "futura_condensedmedium";
   font-weight: 700; }
 
+h2 {
+  font-size: 5.2rem;
+  padding-bottom: 40px; }
+
 h3, h4, h5 {
-  font-weight: 100; }
+  font-weight: 100;
+  font-family: "Hind"; }
 
 .page {
   width: 100%;
@@ -168,8 +179,6 @@ h1 {
   float: left;
   width: 100%; }
   .quick-intro h2 {
-    font-size: 3.8rem;
-    padding-bottom: 20px;
     text-transform: uppercase;
     color: #9e9e95; }
   .quick-intro strong {
@@ -268,7 +277,7 @@ h1 {
         opacity: 1; }
   .top-level-nav h3 {
     padding-bottom: 15px;
-    font-size: 2.6rem;
+    font-size: 3.2rem;
     font-weight: 100;
     cursor: pointer;
     text-decoration: underline; }
@@ -313,8 +322,7 @@ h1 {
     .our-team .member-detail.active {
       display: block; }
   .our-team h2 {
-    font-size: 3.8rem;
-    padding: 20px 0;
+    padding-top: 20px;
     text-transform: uppercase; }
   .our-team h3 {
     font-size: 2.5em;
@@ -408,8 +416,6 @@ h1 {
       display: block;
       font-size: 1.2rem; } }
   .our-craft h2 {
-    font-size: 3.8rem;
-    padding-bottom: 20px;
     text-transform: uppercase; }
   .our-craft h3 {
     font-size: 3.0rem;
@@ -419,8 +425,6 @@ h1 {
   background: url("../images/find-out-more-angled-top.png") top center no-repeat #ebebeb;
   padding: 80px 0; }
   .find-out-more h2 {
-    font-size: 3.8rem;
-    padding-bottom: 20px;
     text-transform: uppercase; }
   .find-out-more h3 {
     font-size: 3.0rem;
