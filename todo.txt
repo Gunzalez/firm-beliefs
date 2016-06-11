@@ -3,4 +3,5 @@ Responsive everything
 # Get fonts
 Delay carousel until images are loaded
 mobile-only links
-Header and Purpose alignment
+Header and Purpose alignment *
+Back To Top *

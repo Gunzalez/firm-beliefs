@@ -16,7 +16,8 @@
     firmBeliefs.environment = {
         // main navigation functionality
         $mainNavContainer: $('.main-nav-container'),
-        $mainNavTrigger: $('.main-nav-trigger a'),
+        $mainNavTriggerOpen: $('.main-nav-trigger-open a'),
+        $mainNavTriggerClose: $('.main-nav-trigger-close a', this.$mainNavContainer),
         mainNavShow: function(){
             this.$mainNavContainer.addClass('animated open');
         },
@@ -34,12 +35,17 @@
         init: function (){
             var self = this;
 
-            this.$mainNavTrigger.on('click', function(evt){
+            self.$mainNavTriggerOpen.on('click', function(evt){
                 evt.preventDefault();
                 self.mainNavShow();
             });
 
-            this.$mainNavContainer.on('mouseleave', function(){
+            self.$mainNavTriggerClose.on('click', function(evt){
+                evt.preventDefault();
+                self.mainNavHide();
+            });
+
+            self.$mainNavContainer.on('mouseleave', function(){
                 self.mainNavHide();
             });
 
