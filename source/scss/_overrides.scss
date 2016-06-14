@@ -21,3 +21,15 @@
         padding: 0 30px;
     }
 }
+
+.hidden-md-down {
+    @media (max-width: $width-md - 1){
+        display: none;
+    }
+}
+
+.hidden-md-up {
+    @media (min-width: $width-md + 1){
+        display: none;
+    }
+}
