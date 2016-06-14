@@ -7,3 +7,4 @@ More on homepage 9th to 10th 	        6hrs
 Completes homepage 10th to 10th         4hrs
 Main menu html                          2hrs
 Responsive, 14th                        4hrs
+More responsive, 15th                   4hrs
