@@ -5,12 +5,17 @@
 
     firmBeliefs.properties = {
         windowWidth: '',
-        isMobile: false,
-        isDesktop: false
+        isMobile: false
     };
 
     firmBeliefs.utils = {
-
+        mobileCheck: function() {
+            var rtnVal = false;
+            if($('html').hasClass('mobile-device')){
+                rtnVal = true;
+            }
+            return rtnVal;
+        }
     };
 
     firmBeliefs.environment = {
@@ -35,6 +40,10 @@
         init: function (){
             var self = this;
 
+            if (firmBeliefs.utils.mobileCheck()){
+                firmBeliefs.properties.isMobile = true;
+            }
+
             self.$mainNavTriggerOpen.on('click', function(evt){
                 evt.preventDefault();
                 self.mainNavShow();
@@ -56,6 +65,8 @@
             $('body').on('click', '.stop-propagation', function(evt){
                 evt.stopPropagation();
             });
+
+
         }
     };
 
