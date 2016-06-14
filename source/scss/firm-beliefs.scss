@@ -78,11 +78,27 @@ h2 {
     font-size: 4.6rem;
     padding-bottom: 40px;
     letter-spacing: 3px;
+
+    @media (max-width: $width-lg){
+        font-size: 3.7rem;
+        padding-bottom: 30px;
+    }
 }
 
 h3, h4, h5 {
     font-weight: 100;
     font-family: $fbBodyFont;
+}
+
+h3 {
+    font-size: 3.2rem;
+    padding-bottom: 20px;
+
+
+    @media (max-width: $width-lg){
+        font-size: 2.4rem;
+        padding-bottom: 12px;
+    }
 }
 
 .page {
@@ -109,12 +125,6 @@ a {
     }
 }
 
-@media (max-width: $width-lg){
-    .container {
-        width: 100%;
-    }
-}
-
 .header {
     background-color: $clr-primary-dark;
     color: $clr-primary-grey;
@@ -126,14 +136,15 @@ a {
 }
 
 h1 {
-    background: url("../images/logo-firm-beliefs.png") 0 0 no-repeat;
-    text-indent: -9000px;
-    width: 268px;
-    height: 36px;
-    background-size: cover;
 
     a {
         display: block;
+    }
+
+    @media (max-width: $width-lg){
+        img {
+            height: 30px;
+        }
     }
 }
 
@@ -180,7 +191,11 @@ h1 {
 .main-nav-trigger-open {
     position: absolute;
     bottom: 3px;
-    right: 15px;
+    right: 20px;
+
+    @media (max-width: $width-lg){
+        right: 30px;
+    }
 
     a {
         background: url("../images/icon-horizontal-nav-bars.png") 0 0 no-repeat;
@@ -199,12 +214,16 @@ h1 {
 
 .main-nav-trigger-close {
     text-align: right;
-    margin: 41px 0;
+    margin: 40px 3px;
+
+    @media (max-width: $width-lg){
+        margin: 37px 3px;
+    }
 
     a {
-        font-size: 4.6rem;
+        font-size: 4.7rem;
         line-height: 46px;
-        color: $clr-primary-grey;
+        color: $clr-primary-orange;
         @include transitions(0.5s);
 
         &:hover {
@@ -229,15 +248,20 @@ h1 {
 
     &.open {
         right: -15px;
+
+
+        @media (max-width: $width-lg){
+            right: -5px;
+        }
     }
 
-    padding: 0 40px;
+    padding: 0 30px;
 }
 
 .main-nav {
     @extend %cleanUL;
     text-align: right;
-    width: 220px;
+    width: 100%;
 
     a {
         &:hover {
@@ -286,8 +310,6 @@ h1 {
 .quick-intro {
     padding-top: 90px;
     padding-bottom: 20px;
-    float: left;
-    width: 100%;
 
     h2 {
         text-transform: uppercase;
@@ -418,8 +440,6 @@ h1 {
     }
 
     h3 {
-        padding-bottom: 15px;
-        font-size: 3.2rem;
         font-weight: 100;
         cursor: pointer;
         text-decoration: underline;
@@ -482,8 +502,6 @@ h1 {
     }
 
     h3 {
-        font-size: 2.5em;
-        padding-bottom: 15px;
         color: $clr-primary-orange;
     }
 
@@ -539,6 +557,19 @@ h1 {
             &.active {
                 background-color: $clr-primary-orange;
                 cursor: default;
+            }
+        }
+
+        @media (max-width: $width-lg){
+
+            li {
+                display: inline;
+                padding: 0 10px;
+            }
+
+            a {
+                width: 20px;
+                height: 20px;
             }
         }
     }
@@ -624,11 +655,6 @@ h1 {
     h2 {
         text-transform: uppercase;
     }
-
-    h3 {
-        font-size: 3.0rem;
-        padding-bottom: 20px;
-    }
 }
 
 .find-out-more {
@@ -638,11 +664,6 @@ h1 {
 
     h2 {
         text-transform: uppercase;
-    }
-
-    h3 {
-        font-size: 3.0rem;
-        padding-bottom: 20px;
     }
 
     .tweet-meta {

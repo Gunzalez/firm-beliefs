@@ -11,6 +11,11 @@
   box-shadow: none !important;
   outline: none !important; }
 
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+    padding: 0 30px; } }
+
 .contact-nav, .main-nav, .main-nav ul, .quick-intro .intro, .top-level-nav ul, .our-team .team-navigation ul, .footer .footer-navigation {
   margin: 0;
   padding: 0;
@@ -80,10 +85,22 @@ h2 {
   font-size: 4.6rem;
   padding-bottom: 40px;
   letter-spacing: 3px; }
+  @media (max-width: 1200px) {
+    h2 {
+      font-size: 3.7rem;
+      padding-bottom: 30px; } }
 
 h3, h4, h5 {
   font-weight: 100;
   font-family: "Helvetica"; }
+
+h3 {
+  font-size: 3.2rem;
+  padding-bottom: 20px; }
+  @media (max-width: 1200px) {
+    h3 {
+      font-size: 2.4rem;
+      padding-bottom: 12px; } }
 
 .page {
   width: 100%;
@@ -104,10 +121,6 @@ a {
     color: #F48220;
     text-decoration: underline; }
 
-@media (max-width: 1200px) {
-  .container {
-    width: 100%; } }
-
 .header {
   background-color: #363636;
   color: #9e9e95;
@@ -117,14 +130,12 @@ a {
   .header .container {
     position: relative; }
 
-h1 {
-  background: url("../images/logo-firm-beliefs.png") 0 0 no-repeat;
-  text-indent: -9000px;
-  width: 268px;
-  height: 36px;
-  background-size: cover; }
-  h1 a {
-    display: block; }
+h1 a {
+  display: block; }
+
+@media (max-width: 1200px) {
+  h1 img {
+    height: 30px; } }
 
 .nav-box {
   position: relative;
@@ -159,7 +170,10 @@ h1 {
 .main-nav-trigger-open {
   position: absolute;
   bottom: 3px;
-  right: 15px; }
+  right: 20px; }
+  @media (max-width: 1200px) {
+    .main-nav-trigger-open {
+      right: 30px; } }
   .main-nav-trigger-open a {
     background: url("../images/icon-horizontal-nav-bars.png") 0 0 no-repeat;
     width: 42px;
@@ -176,11 +190,14 @@ h1 {
 
 .main-nav-trigger-close {
   text-align: right;
-  margin: 41px 0; }
+  margin: 40px 3px; }
+  @media (max-width: 1200px) {
+    .main-nav-trigger-close {
+      margin: 37px 3px; } }
   .main-nav-trigger-close a {
-    font-size: 4.6rem;
+    font-size: 4.7rem;
     line-height: 46px;
-    color: #9e9e95;
+    color: #F48220;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -197,7 +214,7 @@ h1 {
   z-index: 10;
   background-color: #363636;
   background-color: rgba(54, 54, 54, 0.8);
-  padding: 0 40px; }
+  padding: 0 30px; }
   .main-nav-container.animated {
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -205,10 +222,13 @@ h1 {
     transition: all 0.5s; }
   .main-nav-container.open {
     right: -15px; }
+    @media (max-width: 1200px) {
+      .main-nav-container.open {
+        right: -5px; } }
 
 .main-nav {
   text-align: right;
-  width: 220px; }
+  width: 100%; }
   .main-nav a:hover {
     text-decoration: none; }
   .main-nav > li {
@@ -235,9 +255,7 @@ h1 {
 
 .quick-intro {
   padding-top: 90px;
-  padding-bottom: 20px;
-  float: left;
-  width: 100%; }
+  padding-bottom: 20px; }
   .quick-intro h2 {
     text-transform: uppercase;
     color: #9e9e95;
@@ -337,8 +355,6 @@ h1 {
         color: #ffffff;
         opacity: 1; }
   .top-level-nav h3 {
-    padding-bottom: 15px;
-    font-size: 3.2rem;
     font-weight: 100;
     cursor: pointer;
     text-decoration: underline; }
@@ -386,8 +402,6 @@ h1 {
     padding-top: 20px;
     text-transform: uppercase; }
   .our-team h3 {
-    font-size: 2.5em;
-    padding-bottom: 15px;
     color: #F48220; }
   .our-team p {
     font-size: 1.6rem;
@@ -429,6 +443,13 @@ h1 {
       .our-team .team-navigation a.active {
         background-color: #F48220;
         cursor: default; }
+    @media (max-width: 1200px) {
+      .our-team .team-navigation li {
+        display: inline;
+        padding: 0 10px; }
+      .our-team .team-navigation a {
+        width: 20px;
+        height: 20px; } }
 
 .our-craft {
   padding: 60px 0 30px 0;
@@ -478,18 +499,12 @@ h1 {
       font-size: 1.2rem; } }
   .our-craft h2 {
     text-transform: uppercase; }
-  .our-craft h3 {
-    font-size: 3.0rem;
-    padding-bottom: 20px; }
 
 .find-out-more {
   background: url("../images/find-out-more-angled-top.png") top center no-repeat #ebebeb;
   padding: 80px 0; }
   .find-out-more h2 {
     text-transform: uppercase; }
-  .find-out-more h3 {
-    font-size: 3.0rem;
-    padding-bottom: 20px; }
   .find-out-more .tweet-meta {
     background: url("../images/bg-fb-twitter-icon.png") 0 0 no-repeat;
     padding-left: 65px;
