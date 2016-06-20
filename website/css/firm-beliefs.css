@@ -82,7 +82,7 @@ strong {
 .underlined-text {
   text-decoration: underline; }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   line-height: 100%;
@@ -98,8 +98,8 @@ h2 {
       font-size: 3.0rem;
       padding-bottom: 30px; } }
 
-h3, h4, h5 {
-  font-weight: 100;
+h3, h4, h5, h6 {
+  font-weight: 400;
   font-family: "Helvetica"; }
 
 h3 {
@@ -109,6 +109,23 @@ h3 {
     h3 {
       font-size: 2.4rem;
       padding-bottom: 12px; } }
+
+h4 {
+  padding-top: 10px;
+  font-size: 2.8rem;
+  padding-bottom: 20px; }
+  @media (max-width: 1200px) {
+    h4 {
+      font-size: 2.5rem;
+      padding-bottom: 12px; } }
+
+h5 {
+  font-size: 2.0rem;
+  padding-bottom: 15px; }
+
+h6 {
+  font-size: 1.8rem;
+  color: #F48220; }
 
 .page {
   width: 100%;
@@ -326,6 +343,38 @@ h1 a {
     @media (max-width: 767px) {
       .hero .hero-angled-top {
         display: none; } }
+  .hero.inner-hero {
+    margin-top: 20px;
+    position: relative; }
+    .hero.inner-hero .top-border {
+      position: absolute;
+      background: url("../images/inner-hero-top-border.png") top center no-repeat;
+      top: 0;
+      left: 0;
+      height: 72px;
+      width: 100%; }
+    .hero.inner-hero .bottom-border {
+      position: absolute;
+      background: url("../images/inner-hero-bottom-border.png") bottom center no-repeat;
+      bottom: 0;
+      left: 0;
+      height: 59px;
+      width: 100%; }
+
+.news-item .category-one {
+  background: url("../uploaded/news-category-one.png") top right no-repeat;
+  min-height: 40px; }
+
+.news-item .category-two {
+  background: url("../uploaded/news-category-two.png") top right no-repeat;
+  min-height: 40px; }
+
+.news-item .date {
+  font-size: 1.5rem; }
+
+.news-item .news-item-story {
+  margin: 20px 0 30px 0;
+  border-bottom: 1px dotted #9e9e95; }
 
 .top-level-nav {
   padding: 0 0 83px 0;
@@ -394,7 +443,8 @@ h1 a {
         cursor: text; }
       .top-level-nav li.active .more-link {
         color: #ffffff;
-        opacity: 1; }
+        opacity: 1;
+        cursor: pointer; }
     @media (max-width: 992px) {
       .top-level-nav li {
         width: 30%;
@@ -431,6 +481,12 @@ h1 a {
     -o-transition: all 0.5s;
     transition: all 0.5s;
     display: inline-block; }
+
+.inner-content {
+  background: #ffffff;
+  padding: 30px 0; }
+  .inner-content h2 {
+    text-transform: uppercase; }
 
 .our-team {
   background-color: #ebebeb;

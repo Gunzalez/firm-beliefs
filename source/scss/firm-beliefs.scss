@@ -66,7 +66,7 @@ strong {
     text-decoration: underline;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
     line-height: 100%;
@@ -85,8 +85,8 @@ h2 {
     }
 }
 
-h3, h4, h5 {
-    font-weight: 100;
+h3, h4, h5, h6 {
+    font-weight: 400;
     font-family: $fbBodyFont;
 }
 
@@ -94,11 +94,32 @@ h3 {
     font-size: 3.2rem;
     padding-bottom: 20px;
 
-
     @media (max-width: $width-lg){
         font-size: 2.4rem;
         padding-bottom: 12px;
     }
+}
+
+h4 {
+    padding-top: 10px;
+    font-size: 2.8rem;
+    padding-bottom: 20px;
+
+    @media (max-width: $width-lg){
+        font-size: 2.5rem;
+        padding-bottom: 12px;
+    }
+}
+
+h5 {
+    font-size: 2.0rem;
+    padding-bottom: 15px;
+}
+
+
+h6 {
+    font-size: 1.8rem;
+    color: $clr-primary-orange;
 }
 
 .page {
@@ -395,6 +416,51 @@ h1 {
             display: none;
         }
     }
+
+    &.inner-hero {
+        margin-top: 20px;
+        position: relative;
+
+        .top-border {
+            position: absolute;
+            background: url("../images/inner-hero-top-border.png") top center no-repeat;
+            top: 0;
+            left: 0;
+            height: 72px;
+            width: 100%;
+        }
+
+        .bottom-border {
+            position: absolute;
+            background: url("../images/inner-hero-bottom-border.png") bottom center no-repeat;
+            bottom: 0;
+            left: 0;
+            height: 59px;
+            width: 100%;
+        }
+    }
+}
+
+.news-item {
+
+    .category-one {
+        background: url("../uploaded/news-category-one.png") top right no-repeat;
+        min-height: 40px;
+    }
+
+    .category-two {
+        background: url("../uploaded/news-category-two.png") top right no-repeat;
+        min-height: 40px;
+    }
+
+    .date {
+        font-size: 1.5rem;
+    }
+
+    .news-item-story {
+        margin: 20px 0 30px 0;
+        border-bottom: 1px dotted $clr-primary-grey;
+    }
 }
 
 .top-level-nav {
@@ -479,6 +545,7 @@ h1 {
             .more-link {
                 color: #ffffff;
                 opacity: 1;
+                cursor: pointer;
             }
         }
 
@@ -529,6 +596,16 @@ h1 {
         color: $clr-primary-dark;
         @include transitions(0.5s);
         display: inline-block;
+    }
+}
+
+.inner-content {
+    background: #ffffff;
+    padding: 30px 0;
+
+
+    h2 {
+        text-transform: uppercase;
     }
 }
 

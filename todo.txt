@@ -6,3 +6,4 @@ mobile-only links
 # Header and Purpose alignment *
 Back To Top *
 User AGent tweaks to form fields
+See about Who We Are image sizing

@@ -8,3 +8,5 @@ Completes homepage 10th to 10th         4hrs
 Main menu html                          2hrs
 Responsive, 14th                        4hrs
 More responsive, 15th                   4hrs
+Finishes responsive homepage 20th      2hrs
+Starts inner pages 20th                 2hrs

@@ -107,7 +107,7 @@
                 self.$controls.on('click', function (evt) {
                     evt.preventDefault();
                     if(!$(this).hasClass('active')){
-                        // make this link only active
+                        // make only this link active
                         var index = self.$controls.index($(this));
                         self.displayMember(index);
                         self.$controls.removeClass('active');
