@@ -1,8 +1,11 @@
 @charset "UTF-8";
-.contact-nav, .main-nav, .main-nav ul, .quick-intro .intro, .top-level-nav ul, .our-team .team-navigation ul, .footer .footer-navigation {
+.contact-nav, .main-nav, .main-nav ul, .quick-intro .intro, .top-level-nav ul, .inner-content ul, .our-team .team-navigation ul, .footer .footer-navigation {
   margin: 0;
   padding: 0;
   list-style: none; }
+
+.news-item .news-item-story, .news-divider img, .inner-content .bordered-bottom, .inner-content .twitter-box .tweet-img {
+  border-bottom: 1px dotted #9e9e95; }
 
 @font-face {
   font-family: 'FuturaCondensedMedium';
@@ -419,13 +422,11 @@ h1 a {
   font-size: 1.5rem; }
 
 .news-item .news-item-story {
-  margin: 20px 0 30px 0;
-  border-bottom: 1px dotted #9e9e95; }
+  margin: 20px 0 30px 0; }
 
 .news-divider img {
   width: 100%;
   padding-bottom: 20px;
-  border-bottom: 1px dotted #9e9e95;
   margin-bottom: 30px; }
 
 .newsletter-sign-up .newsletter-form {
@@ -435,6 +436,12 @@ h1 a {
     color: #ffffff; }
   .newsletter-sign-up .newsletter-form .has-error input, .newsletter-sign-up .newsletter-form .has-error textarea {
     border-color: #F48220; }
+
+.profile-large {
+  width: 100%; }
+  @media (max-width: 767px) {
+    .profile-large {
+      padding-bottom: 20px; } }
 
 .top-level-nav {
   padding: 0 0 83px 0;
@@ -547,6 +554,15 @@ h1 a {
   padding: 30px 0; }
   .inner-content h2 {
     text-transform: uppercase; }
+  .inner-content ul {
+    margin-bottom: 20px; }
+  .inner-content .bordered-bottom {
+    margin-bottom: 20px; }
+  .inner-content .twitter-box {
+    padding-bottom: 0; }
+    .inner-content .twitter-box .tweet-img {
+      padding-bottom: 20px;
+      margin-bottom: 20px; }
 
 .our-team {
   background-color: #ebebeb;
@@ -705,12 +721,15 @@ h1 a {
       padding-top: 60px; } }
   .find-out-more h2 {
     text-transform: uppercase; }
-  .find-out-more .tweet-meta {
+
+.twitter-box {
+  padding-bottom: 30px; }
+  .twitter-box .tweet-meta {
     background: url("../images/bg-fb-twitter-icon.png") 0 0 no-repeat;
     padding-left: 65px;
     min-height: 55px;
     margin-bottom: 15px; }
-  .find-out-more img {
+  .twitter-box .tweet-img {
     width: 100%; }
 
 .trunk {
