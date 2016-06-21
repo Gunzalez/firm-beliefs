@@ -1,4 +1,7 @@
-
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
 .row {
     margin-right: -20px;
@@ -31,5 +34,58 @@
 .hidden-md-up {
     @media (min-width: $width-md + 1){
         display: none;
+    }
+}
+
+.page {
+
+    form {
+
+        textarea {
+            resize: none;
+        }
+
+        input, textarea {
+            color: #000000;
+            border: 1px solid $clr-primary-light;
+        }
+
+        .error-message {
+            padding: 2px 4px;
+            font-size: 1.2rem;
+            color: $clr-error;
+            display: none;
+        }
+
+        .has-error {
+
+            input, textarea {
+                border-color: $clr-error;
+            }
+
+            .error-message {
+                display: block;
+            }
+        }
+
+        @media (min-width: $width-md){
+
+            input[type=email],
+            input[type=text] {
+                outline: none;
+                padding: 2px 4px;
+                @include border-radius(0);
+                height: auto;
+                width: 90%;
+                line-height: 100%;
+            }
+
+            textarea {
+                @include border-radius(0);
+                border: none;
+                padding: 2px 4px;
+                line-height: 100%;
+            }
+        }
     }
 }

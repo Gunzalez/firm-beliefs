@@ -12,9 +12,9 @@ $clr-error:             #a94442;
 $fbHeaderFont:          "FuturaCondensedMedium";
 $fbBodyFont:            "Helvetica";
 
-@import "overrides";
 @import "mixins";
 @import "fonts";
+@import "overrides";
 
 body {
     background-color: $clr-primary-dark;
@@ -55,6 +55,7 @@ body:before {
 
 strong {
     color: $clr-primary-orange;
+    font-weight: 100;
 }
 
 .text-strong {
@@ -438,6 +439,10 @@ h1 {
             height: 59px;
             width: 100%;
         }
+
+        @media (max-width: $width-sm) {
+            display: none;
+        }
     }
 }
 
@@ -460,6 +465,35 @@ h1 {
     .news-item-story {
         margin: 20px 0 30px 0;
         border-bottom: 1px dotted $clr-primary-grey;
+    }
+}
+
+.news-divider {
+
+    img {
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom: 1px dotted $clr-primary-grey;
+        margin-bottom: 30px;
+    }
+}
+
+.newsletter-sign-up {
+
+    .newsletter-form {
+        padding: 15px;
+        background: #363636;
+
+        .error-message {
+            color: #ffffff;
+        }
+
+        .has-error {
+
+            input, textarea {
+                border-color: $clr-primary-orange;
+            }
+        }
     }
 }
 
@@ -848,7 +882,6 @@ h1 {
         padding-top: 60px;
     }
 
-
     h2 {
         text-transform: uppercase;
     }
@@ -866,57 +899,23 @@ h1 {
 
     .contact-form {
 
-        textarea {
-            resize: none;
-        }
 
-        input, textarea {
-            color: #000000;
-            border: 1px solid $clr-primary-light;
-        }
 
-        .error-message {
-            padding: 2px 4px;
-            font-size: 1.2rem;
-            color: $clr-error;
-            display: none;
-        }
 
-        .has-error {
-
-            input, textarea {
-                border-color: $clr-error;
-            }
-
-            .error-message {
-                display: block;
-            }
-        }
-
-        @media (min-width: $width-md){
-            input[type=email],
-            input[type=text]{
-                outline: none;
-                padding: 2px 4px;
-                @include border-radius(0);
-                height: auto;
-                width: 90%;
-                line-height: 100%;
-            }
-
-            textarea {
-                @include border-radius(0);
-                border: none;
-                padding: 2px 4px;
-                line-height: 100%;
-            }
-        }
     }
 }
 
+
 .trunk {
     padding-bottom: 82px;
-    background: url('../images/footer-angled-top.png') bottom center no-repeat $clr-primary-light;
+    background: url('../images/footer-angled-top.png') bottom center no-repeat #ffffff;
+}
+
+.home {
+    .trunk {
+        padding-bottom: 82px;
+        background: url('../images/footer-angled-top.png') bottom center no-repeat $clr-primary-light;
+    }
 }
 
 .footer {

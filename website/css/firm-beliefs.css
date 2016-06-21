@@ -1,4 +1,25 @@
 @charset "UTF-8";
+.contact-nav, .main-nav, .main-nav ul, .quick-intro .intro, .top-level-nav ul, .our-team .team-navigation ul, .footer .footer-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+@font-face {
+  font-family: 'FuturaCondensedMedium';
+  src: url("fonts/futura_condensed_medium-webfont.woff2") format("woff2"), url("fonts/futura_condensed_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url("Helvetica.eot?#iefix") format("embedded-opentype"), url("fonts/Helvetica.otf") format("opentype"), url("fonts/Helvetica.woff") format("woff"), url("fonts/Helvetica.ttf") format("truetype"), url("fonts/Helvetica.svg#Helvetica") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px; }
+
 .row {
   margin-right: -20px;
   margin-left: -20px; }
@@ -24,22 +45,43 @@
   .hidden-md-up {
     display: none; } }
 
-.contact-nav, .main-nav, .main-nav ul, .quick-intro .intro, .top-level-nav ul, .our-team .team-navigation ul, .footer .footer-navigation {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
+.page form textarea {
+  resize: none; }
 
-@font-face {
-  font-family: 'FuturaCondensedMedium';
-  src: url("fonts/futura_condensed_medium-webfont.woff2") format("woff2"), url("fonts/futura_condensed_medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
+.page form input, .page form textarea {
+  color: #000000;
+  border: 1px solid #ebebeb; }
 
-@font-face {
-  font-family: 'Helvetica';
-  src: url("Helvetica.eot?#iefix") format("embedded-opentype"), url("fonts/Helvetica.otf") format("opentype"), url("fonts/Helvetica.woff") format("woff"), url("fonts/Helvetica.ttf") format("truetype"), url("fonts/Helvetica.svg#Helvetica") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+.page form .error-message {
+  padding: 2px 4px;
+  font-size: 1.2rem;
+  color: #a94442;
+  display: none; }
+
+.page form .has-error input, .page form .has-error textarea {
+  border-color: #a94442; }
+
+.page form .has-error .error-message {
+  display: block; }
+
+@media (min-width: 992px) {
+  .page form input[type=email],
+  .page form input[type=text] {
+    outline: none;
+    padding: 2px 4px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    height: auto;
+    width: 90%;
+    line-height: 100%; }
+  .page form textarea {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: none;
+    padding: 2px 4px;
+    line-height: 100%; } }
 
 body {
   background-color: #363636;
@@ -73,7 +115,8 @@ body:before {
   color: #9e9e95 !important; }
 
 strong {
-  color: #F48220; }
+  color: #F48220;
+  font-weight: 100; }
 
 .text-strong {
   color: #000000;
@@ -360,6 +403,9 @@ h1 a {
       left: 0;
       height: 59px;
       width: 100%; }
+    @media (max-width: 768px) {
+      .hero.inner-hero {
+        display: none; } }
 
 .news-item .category-one {
   background: url("../uploaded/news-category-one.png") top right no-repeat;
@@ -375,6 +421,20 @@ h1 a {
 .news-item .news-item-story {
   margin: 20px 0 30px 0;
   border-bottom: 1px dotted #9e9e95; }
+
+.news-divider img {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #9e9e95;
+  margin-bottom: 30px; }
+
+.newsletter-sign-up .newsletter-form {
+  padding: 15px;
+  background: #363636; }
+  .newsletter-sign-up .newsletter-form .error-message {
+    color: #ffffff; }
+  .newsletter-sign-up .newsletter-form .has-error input, .newsletter-sign-up .newsletter-form .has-error textarea {
+    border-color: #F48220; }
 
 .top-level-nav {
   padding: 0 0 83px 0;
@@ -652,40 +712,12 @@ h1 a {
     margin-bottom: 15px; }
   .find-out-more img {
     width: 100%; }
-  .find-out-more .contact-form textarea {
-    resize: none; }
-  .find-out-more .contact-form input, .find-out-more .contact-form textarea {
-    color: #000000;
-    border: 1px solid #ebebeb; }
-  .find-out-more .contact-form .error-message {
-    padding: 2px 4px;
-    font-size: 1.2rem;
-    color: #a94442;
-    display: none; }
-  .find-out-more .contact-form .has-error input, .find-out-more .contact-form .has-error textarea {
-    border-color: #a94442; }
-  .find-out-more .contact-form .has-error .error-message {
-    display: block; }
-  @media (min-width: 992px) {
-    .find-out-more .contact-form input[type=email],
-    .find-out-more .contact-form input[type=text] {
-      outline: none;
-      padding: 2px 4px;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      height: auto;
-      width: 90%;
-      line-height: 100%; }
-    .find-out-more .contact-form textarea {
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      border: none;
-      padding: 2px 4px;
-      line-height: 100%; } }
 
 .trunk {
+  padding-bottom: 82px;
+  background: url("../images/footer-angled-top.png") bottom center no-repeat #ffffff; }
+
+.home .trunk {
   padding-bottom: 82px;
   background: url("../images/footer-angled-top.png") bottom center no-repeat #ebebeb; }
 
