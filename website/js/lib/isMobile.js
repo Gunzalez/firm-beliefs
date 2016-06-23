@@ -4,5 +4,7 @@ var mobileCheck = function() {
     return check;
 };
 if(mobileCheck()){
-    document.getElementsByTagName('html')[0].className += " mobile-device";
+    document.getElementsByTagName('html')[0].className += "mobile";
+} else {
+    document.getElementsByTagName('html')[0].className += "not-mobile";
 }

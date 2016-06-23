@@ -11,40 +11,38 @@
     firmBeliefs.utils = {
         mobileCheck: function() {
             var rtnVal = false;
-            if($('html').hasClass('mobile-device')){
+            if($('html').hasClass('mobile')){
                 rtnVal = true;
             }
             return rtnVal;
         }
     };
 
-    firmBeliefs.environment = {
-        // main navigation functionality
+    firmBeliefs.mainNavigation = {
+        // main navigation
         $mainNavContainer: $('.main-nav-container'),
         $mainNavTriggerOpen: $('.main-nav-trigger-open a'),
         $mainNavTriggerClose: $('.main-nav-trigger-close a', this.$mainNavContainer),
+
         mainNavShow: function(){
             this.$mainNavContainer.addClass('animated open');
         },
+
         mainNavHide: function(){
             this.$mainNavContainer.removeClass('open');
         },
+
         mainNavResize: function(){
             this.$mainNavContainer.removeClass('animated').height($('.page').height());
+            this.mainNavHide();
         },
 
         resize: function () {
             this.mainNavResize();
         },
 
-
-
-        init: function (){
+        init: function(){
             var self = this;
-
-            if (firmBeliefs.utils.mobileCheck()){
-                firmBeliefs.properties.isMobile = true;
-            }
 
             self.$mainNavTriggerOpen.on('click', function(evt){
                 evt.preventDefault();
@@ -60,30 +58,45 @@
                 self.mainNavHide();
             });
 
-            // window size
-            firmBeliefs.properties.windowWidth = $(window).width();
-            this.resize();
+            self.$mainNavContainer.on('click', function(){
+                self.mainNavHide();
+            });
+        }
+    };
 
+    firmBeliefs.environment = {
+
+        resize: function(){
+
+        },
+
+        init: function (){
+
+            // check for mobile
+            if (firmBeliefs.utils.mobileCheck()){
+                firmBeliefs.properties.isMobile = true;
+            }
+
+            // helper for stopping propagation
             $('body').on('click', '.stop-propagation', function(evt){
                 evt.stopPropagation();
             });
 
-
-            //Check to see if the window is top if not then display button
+            // check is scrolled past threshold
+            var threshold  = 200;
             $(window).scroll(function(){
-                if ($(this).scrollTop() > 100) {
+                if ($(this).scrollTop() > threshold) {
                     $('.back-to-top').addClass('opaque');
                 } else {
                     $('.back-to-top').removeClass('opaque');
                 }
             });
 
-            //Click event to scroll to top
+            // click event to scroll to top
             $('.back-to-top a').click(function(){
                 $('html, body').animate({scrollTop : 0},800);
                 return false;
             });
-
 
         }
     };
@@ -181,8 +194,11 @@
 
     firmBeliefs.init = function () {
 
+        $('#calendar').dcalendar();
+
         // all init
         firmBeliefs.environment.init();
+        firmBeliefs.mainNavigation.init();
         firmBeliefs.homePage.init();
         firmBeliefs.team.init();
 
@@ -205,6 +221,7 @@
     // main resize
     firmBeliefs.resize = function () {
         firmBeliefs.environment.resize();
+        firmBeliefs.mainNavigation.resize();
     };
 
     // main init

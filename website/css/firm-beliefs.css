@@ -91,7 +91,7 @@ body {
   font-family: "Helvetica";
   font-weight: 100; }
 
-body:before {
+.not-mobile body:before {
   content: "";
   position: fixed;
   top: -10px;
@@ -102,6 +102,18 @@ body:before {
   -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
   z-index: 100; }
+
+.btn {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #F48220;
+  color: #ffffff;
+  padding: 3px 10px; }
+
+.btn-spaced {
+  color: #F48220;
+  background: #feefe2; }
 
 .fb-btn {
   background: transparent;
@@ -141,7 +153,7 @@ h2 {
   letter-spacing: 3px; }
   @media (max-width: 1200px) {
     h2 {
-      font-size: 3.0rem;
+      font-size: 4.0rem;
       padding-bottom: 30px; } }
 
 h3, h4, h5, h6 {
@@ -162,7 +174,7 @@ h4 {
   padding-bottom: 20px; }
   @media (max-width: 1200px) {
     h4 {
-      font-size: 2.5rem;
+      font-size: 2.0rem;
       padding-bottom: 12px; } }
 
 h5 {
@@ -189,6 +201,18 @@ a {
   color: #F48220;
   text-decoration: none; }
   a:hover {
+    color: #F48220;
+    text-decoration: underline; }
+  a.phone-link {
+    color: #363636;
+    cursor: default; }
+    a.phone-link:hover {
+      text-decoration: none; }
+
+.mobile .phone-link {
+  color: #F48220;
+  text-decoration: none; }
+  .mobile .phone-link:hover {
     color: #F48220;
     text-decoration: underline; }
 
@@ -293,7 +317,7 @@ h1 a {
   right: -320px;
   z-index: 10;
   background-color: #363636;
-  background-color: rgba(54, 54, 54, 0.8);
+  background-color: rgba(54, 54, 54, 0.95);
   padding: 0 30px; }
   .main-nav-container.animated {
     -webkit-transition: all 0.5s;
@@ -325,10 +349,14 @@ h1 a {
       display: block; }
       .main-nav > li a span {
         color: #9e9e95; }
+      .main-nav > li a:focus span {
+        color: #ffffff; }
   .main-nav ul a {
     color: #F48220;
     text-transform: capitalize;
     font-size: 1.8rem; }
+    .main-nav ul a:focus {
+      color: #ffffff; }
 
 .h1-box {
   padding-top: 46px; }
@@ -409,6 +437,28 @@ h1 a {
     @media (max-width: 768px) {
       .hero.inner-hero {
         display: none; } }
+
+.events {
+  padding: 20px 0 0 0; }
+  .events .event {
+    border-top: 1px solid #cccccc;
+    padding: 20px 0 10px 0; }
+    .events .event h4 {
+      background: url("../images/bg-calendar-event.png") 0 0 no-repeat;
+      min-height: 30px;
+      line-height: 30px;
+      padding: 0 0 0 42px;
+      margin-bottom: 12px; }
+  .events .event-links a {
+    margin-bottom: 12px; }
+    @media (max-width: 768px) {
+      .events .event-links a {
+        width: 100%;
+        padding: 6px 10px; } }
+
+#calendar {
+  margin-bottom: 30px;
+  width: 100%; }
 
 .news-item .category-one {
   background: url("../uploaded/news-category-one.png") top right no-repeat;
