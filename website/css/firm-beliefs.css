@@ -209,7 +209,7 @@ a {
     text-decoration: underline; }
   a.phone-link {
     color: #363636;
-    cursor: default; }
+    cursor: text; }
     a.phone-link:hover {
       text-decoration: none; }
 
