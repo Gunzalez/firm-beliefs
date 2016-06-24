@@ -194,7 +194,10 @@
 
     firmBeliefs.init = function () {
 
-        $('#calendar').dcalendar();
+        var $calendar = $('#calendar');
+        if($calendar.length > 0){
+            $calendar.dcalendar();
+        }
 
         // all init
         firmBeliefs.environment.init();

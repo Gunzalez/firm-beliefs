@@ -107,6 +107,10 @@ body {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   background: #F48220;
   color: #ffffff;
   padding: 3px 10px; }
@@ -264,6 +268,11 @@ h1 a {
     .contact-nav a.email {
       background: url("../images/icon-bars.png") left center no-repeat;
       padding-left: 20px; }
+
+.calendar-container {
+  border: 1px solid #F48220;
+  padding: 5px 0;
+  margin-bottom: 26px; }
 
 .main-nav-trigger-open {
   position: absolute;
@@ -455,10 +464,6 @@ h1 a {
       .events .event-links a {
         width: 100%;
         padding: 6px 10px; } }
-
-#calendar {
-  margin-bottom: 30px;
-  width: 100%; }
 
 .news-item .category-one {
   background: url("../uploaded/news-category-one.png") top right no-repeat;

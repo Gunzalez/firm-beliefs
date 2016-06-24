@@ -41,6 +41,7 @@ body {
 
 .btn {
     @include border-radius(6px);
+    @include transitions(0.5s);
     background: $clr-primary-orange;
     color: #ffffff;
     padding: 3px 10px;
@@ -251,6 +252,12 @@ h1 {
             padding-left: 20px;
         }
     }
+}
+
+.calendar-container {
+    border: 1px solid $clr-primary-orange;
+    padding: 5px 0;
+    margin-bottom: 26px;
 }
 
 .main-nav-trigger-open {
@@ -526,11 +533,6 @@ h1 {
 
         }
     }
-}
-
-#calendar {
-    margin-bottom: 30px;
-    width: 100%;
 }
 
 .news-item {
