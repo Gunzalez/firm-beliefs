@@ -8,7 +8,7 @@
  */
 .calendar {
     position: relative;
-    font-family: 'Century Gothic', 'Segoe UI', Calibri, Arial;
+    font-family: 'Helvetica';
     font-size: 12px;
     border-collapse: collapse;
     padding: 0;
@@ -16,8 +16,8 @@
     width: 240px;
     color: #000;
     text-align: center;
-    background-color: #FFF;
     margin: 0 auto;
+    font-weight: bold;
 }
 
 .calendar th,
@@ -37,7 +37,10 @@
     padding: 6px 8px;
     display: block;
     border-radius: 50%;
-    border: 2px solid #ffffff;
+    border: 3px solid transparent;
+    -webki-ttransition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .calendar .month {
@@ -56,18 +59,23 @@
     cursor: pointer;
 }
 
+.calendar .pMDate,
+.calendar .nMDate {
+    font-weight: 100;
+}
+
+
 .calendar .date:hover span,
 .calendar .pMDate:hover span,
 .calendar .nMDate:hover span,
 .calendar .month:hover span {
-    border-color: #eaeaea;
+    border-color: #ffffff;
 }
 
 .calendar .date:active span,
 .calendar .pMDate:active span,
 .calendar .nMDate:active span,
 .calendar .month:active span {
-    border-color: #fff;
     background-color: #F48220;
     color: #FFF;
 }
@@ -78,23 +86,22 @@
 }
 
 .calendar tr:first-child th {
-    background-color: #FFF;
     padding: 8px;
     font-size: 14px;
 }
 
-.calendar tr:first-child th {
-    cursor: pointer;
-    color: #000;
-}
+/*.calendar tr:first-child th {*/
+    /*cursor: pointer;*/
+    /*color: #000;*/
+/*}*/
 
-.calendar tr:first-child th:hover {
-    color: #F48220;
-}
+/*.calendar tr:first-child th:hover {*/
+    /*color: #F48220;*/
+/*}*/
 
-.calendar tr:first-child th:active {
-    color: #F48220;
-}
+/*.calendar tr:first-child th:active {*/
+    /*color: #F48220;*/
+/*}*/
 
 .calendar thead tr:nth-child(2) th {
     color: #555;
@@ -106,6 +113,13 @@
     font-family: 'Times New Roman';
     font-size: 20px;
     padding: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calendar #prev:hover,
+.calendar #next:hover  {
+    color: #F48220;
 }
 
 .calendar #currDay {

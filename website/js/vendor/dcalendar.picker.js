@@ -146,7 +146,7 @@ if (typeof jQuery === 'undefined') {
                 }
 
                 this.create(this.viewMode);
-            }
+            };
 
     DCalendar.prototype = {
 

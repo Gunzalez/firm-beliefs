@@ -255,9 +255,13 @@ h1 {
 }
 
 .calendar-container {
-    border: 1px solid $clr-primary-orange;
     padding: 5px 0;
-    margin-bottom: 26px;
+    margin-bottom: 15px;
+    background: url("../images/bg-calendar.png") center center no-repeat;
+}
+
+.calendar-details {
+    margin-bottom: 10px;
 }
 
 .main-nav-trigger-open {
