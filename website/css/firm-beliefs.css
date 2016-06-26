@@ -7,6 +7,9 @@
 .news-item .news-item-story, .news-divider img, .inner-content .bordered-bottom, .inner-content .twitter-box .tweet-img {
   border-bottom: 1px dotted #9e9e95; }
 
+.inner-content .bordered-top {
+  border-top: 1px dotted #9e9e95; }
+
 @font-face {
   font-family: 'FuturaCondensedMedium';
   src: url("fonts/futura_condensed_medium-webfont.woff2") format("woff2"), url("fonts/futura_condensed_medium-webfont.woff") format("woff");
@@ -708,6 +711,10 @@ h1 a {
   .inner-content > ul {
     margin-bottom: 20px; }
   .inner-content .bordered-bottom {
+    margin-bottom: 20px; }
+  .inner-content .bordered-top {
+    margin-top: 10px;
+    padding-top: 10px;
     margin-bottom: 20px; }
   .inner-content .twitter-box {
     padding-bottom: 0; }

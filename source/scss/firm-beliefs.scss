@@ -628,7 +628,6 @@ h1 {
     }
 }
 
-
 .pagination-detail {
     text-align: right;
 
@@ -891,6 +890,13 @@ h1 {
 
     .bordered-bottom {
         @extend %bordered-bottom;
+        margin-bottom: 20px;
+    }
+
+    .bordered-top {
+        @extend %bordered-top;
+        margin-top: 10px;
+        padding-top: 10px;
         margin-bottom: 20px;
     }
 

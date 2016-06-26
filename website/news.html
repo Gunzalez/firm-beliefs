@@ -108,10 +108,10 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class="news-filter-container">
-                                    <form method="post" action="news-backed.php">
+                                    <form method="post" action="news.html">
                                         <label for="news-filter">Pick a category</label>
                                         <select id="news-filter" name="filter">
-                                            <option value="general">General news</option>
+                                            <option value="general" selected="selected">General news</option>
                                             <option value="firm-elite">Firm Elite</option>
                                             <option value="legal">Legal</option>
                                             <option value="charities">Charities</option>
@@ -122,7 +122,7 @@
                             </div>
                         </div>
                         <div class="news-panel">
-                            <div class="news-pagination">
+                            <div class="news-pagination bordered-bottom">
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <p>Displaying posts 1-5 (of 43)</p>
@@ -140,58 +140,121 @@
                                 </div>
                             </div>
                             <div class="news-list">
-                                <div class="news-item">
-
+                                <div class="row news-item">
+                                    <div class="col-xs-3">
+                                        <div class="news-item-image">
+                                            <img src="uploaded/profile-count-dooku.png" alt="Count Dooku" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <div class="news-item-meta">
+                                            <h5>The road less travelled</h5>
+                                            <div class="news-author category-two">
+                                                <h6>Count Dooku</h6>
+                                                <span class="date">17th Jul 2015</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="news-item-story">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                                <a href="#">Read full article:</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row news-item">
+                                    <div class="col-xs-3">
+                                        <div class="news-item-image">
+                                            <img src="uploaded/profile-sara-dixon.png" alt="Sara Dixon" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <div class="news-item-meta">
+                                            <h5>Seeking Interview Board members</h5>
+                                            <div class="news-author category-one">
+                                                <h6>Sara Dixon</h6>
+                                                <span class="date">28th Dec 2016</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="news-item-story">
+                                            <p>Would you be interested in sitting on the Interview Board which interviews those who want to take part in our Skills Development programmes?
+                                                <a href="#">Read full article:</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row news-item">
+                                    <div class="col-xs-3">
+                                        <div class="news-item-image">
+                                            <img src="uploaded/profile-photo-woman-2.png" alt="Mulher Melancia" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <div class="news-item-meta">
+                                            <h5>Palpitating soft objects</h5>
+                                            <div class="news-author category-one">
+                                                <h6>Mulher Melancia</h6>
+                                                <span class="date">11th Jun 2014</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="news-item-story">
+                                            <p>Aenean non mauris sodales augue molestie aliquam. Praesent tristique quam magna, nec rutrum risus sollicitudin eu. Suspendisse at vehicula nibh.
+                                                <a href="#">Read full article:</a></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="news-pagination"></div>
+                            <div class="news-pagination">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p>Displaying posts 1-5 (of 43)</p>
+                                    </div>
+                                    <div class="col-sm-6 pagination-detail">
+                                        <span class="tag">Page</span>
+                                        <ul class="pages">
+                                            <li><a href="news.html">1</a></li>
+                                            <li><a href="news.html">2</a></li>
+                                            <li><a href="news.html">3</a></li>
+                                            <li><a href="news.html" class="active">4</a></li>
+                                            <li><a href="news.html">5</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <h3>Latest News</h3>
-                        <div class="row news-item">
-                            <div class="col-xs-3">
-                                <div class="news-item-image">
-                                    <img src="uploaded/profile-count-dooku.png" alt="Count Dooku" />
-                                </div>
-                            </div>
-                            <div class="col-xs-9">
-                                <div class="news-item-meta">
-                                    <h5>The road less travelled</h5>
-                                    <div class="news-author category-two">
-                                        <h6>Count Dooku</h6>
-                                        <span class="date">17th Jul 2015</span>
+                        <h3>Recent Twitter posts</h3>
+                        <div class="twitter-box">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="tweet-meta">
+                                        <p>Sara Dixon<br/>@Firm_Beliefs</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xs-12">
-                                <div class="news-item-story">
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                                        <a href="#">Read full article:</a></p>
+                                <div class="col-xs-12 col-sm-6">
+                                    <p class="text-right text-strong">28th Dec 2016</p>
                                 </div>
                             </div>
+                            <p>Thank you <strong>@LinklatersLLP</strong> for the hospitality today shown to <strong>@RandVFoundation</strong> trustees.</p>
+                            <img src="uploaded/twitter-image.png" class="tweet-img" alt="" />
                         </div>
-                        <div class="row news-item">
-                            <div class="col-xs-3">
-                                <div class="news-item-image">
-                                    <img src="uploaded/profile-sara-dixon.png" alt="Sara Dixon" />
-                                </div>
-                            </div>
-                            <div class="col-xs-9">
-                                <div class="news-item-meta">
-                                    <h5>Seeking Interview Board members</h5>
-                                    <div class="news-author category-one">
-                                        <h6>Sara Dixon</h6>
-                                        <span class="date">28th Dec 2016</span>
+                        <div class="twitter-box">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="tweet-meta">
+                                        <p>Count Dooku<br/>@Firm_Beliefs</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xs-12">
-                                <div class="news-item-story">
-                                    <p>Would you be interested in sitting on the Interview Board which interviews those who want to take part in our Skills Development programmes?
-                                        <a href="#">Read full article:</a></p>
+                                <div class="col-xs-12 col-sm-6">
+                                    <p class="text-right text-strong">28th Dec 2016</p>
                                 </div>
                             </div>
+                            <p>Smiling while drinking some champagne <strong>@RandVFoundation</strong> trustees.</p>
+                            <img src="uploaded/tweet-image-2.png" class="tweet-img" alt="" />
                         </div>
                         <div class="row news-divider">
                             <div class="col-xs-12">
