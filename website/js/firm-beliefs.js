@@ -18,7 +18,7 @@
         }
     };
 
-    firmBeliefs.mainNavigation = {
+    firmBeliefs.navigation = {
         // main navigation
         $mainNavContainer: $('.main-nav-container'),
         $mainNavTriggerOpen: $('.main-nav-trigger-open a'),
@@ -131,6 +131,28 @@
         }
     };
 
+    firmBeliefs.news = {
+        $proxyHTML: $('#news-filter-by-proxy'),
+        $newsFilter: $('#news-filter'),
+        init: function(){
+            var news = this;
+            if(this.$newsFilter.length > 0){
+                this.$newsFilter.on('change', function(){
+                    var url = $(news.$newsFilter).parent('form').attr('action');
+                        url += '?category=' + $(news.$newsFilter).val();
+                        location.replace(url);
+                });
+            }
+            if(this.$proxyHTML.length > 0){
+                $(this.$proxyHTML).on('click', 'a', function(evt){
+                    evt.preventDefault();
+                    var selectedCat = $(this).attr('data-value');
+                    $(news.$newsFilter).val(selectedCat).change();
+                });
+            }
+        }
+    };
+
     firmBeliefs.homePage = {
         $topLevelContainers: $('.top-level-container'),
         $topLevelNavHtml: $('.top-level-nav'),
@@ -201,8 +223,9 @@
 
         // all init
         firmBeliefs.environment.init();
-        firmBeliefs.mainNavigation.init();
+        firmBeliefs.navigation.init();
         firmBeliefs.homePage.init();
+        firmBeliefs.news.init();
         firmBeliefs.team.init();
 
         // resize triggers
@@ -224,7 +247,7 @@
     // main resize
     firmBeliefs.resize = function () {
         firmBeliefs.environment.resize();
-        firmBeliefs.mainNavigation.resize();
+        firmBeliefs.navigation.resize();
     };
 
     // main init
