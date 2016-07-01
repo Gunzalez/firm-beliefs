@@ -47,7 +47,7 @@
 
         input, textarea {
             color: #000000;
-            border: 1px solid $clr-primary-light;
+            border: 1px solid lighten($clr-primary-grey, 20);
         }
 
         .error-message {
@@ -88,4 +88,10 @@
             }
         }
     }
+}
+
+input, textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+    border: 1px solid $clr-primary-dark;
 }
