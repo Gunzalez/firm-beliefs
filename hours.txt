@@ -13,3 +13,4 @@ Starts inner pages 20th                 2hrs
 Completes Elite, refactors              4hrs
 Fixes calendar                          1hr
 News page container                     3hrs
+Hacking calendar plugin                 1hr

@@ -574,11 +574,40 @@ h1 a {
   background: url("../uploaded/news-category-two.png") top right no-repeat;
   min-height: 40px; }
 
-.news-item .date {
-  font-size: 1.5rem; }
+.news-item .date, .news-item .category {
+  font-size: 1.5rem;
+  display: block; }
 
 .news-item .news-item-story {
   margin: 20px 0 30px 0; }
+
+.news-item .news-item-meta {
+  position: relative;
+  min-height: 100px; }
+  .news-item .news-item-meta img {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .news-item .news-item-meta .meta {
+    margin-left: 90px; }
+
+.news-item .full-story.open .controls a.show-story {
+  display: none; }
+
+.news-item .full-story.open .controls a.hide-story {
+  display: block; }
+
+.news-item .full-story .copy {
+  display: none; }
+
+.news-item .full-story .controls {
+  text-align: right; }
+  .news-item .full-story .controls a {
+    margin-bottom: 10px; }
+    .news-item .full-story .controls a.show-story {
+      display: block; }
+    .news-item .full-story .controls a.hide-story {
+      display: none; }
 
 .news-divider img {
   width: 100%;

@@ -134,6 +134,8 @@
     firmBeliefs.news = {
         $proxyHTML: $('#news-filter-by-proxy'),
         $newsFilter: $('#news-filter'),
+        $newsStories: $('.full-story'),
+
         init: function(){
             var news = this;
             if(this.$newsFilter.length > 0){
@@ -150,6 +152,23 @@
                     $(news.$newsFilter).val(selectedCat).change();
                 });
             }
+
+            $(this.$newsStories).each(function(){
+                var openButton = $('.show-story', $(this)),
+                    closeButton = $('.hide-story', $(this));
+
+                openButton.on('click', function(evt){
+                    evt.preventDefault();
+                    $(this).parents('.full-story').addClass('open');
+                    $(this).parents('.full-story').find('.copy').show('slow');
+                });
+
+                closeButton.on('click', function(evt){
+                    evt.preventDefault();
+                    $(this).parents('.full-story').removeClass('open');
+                    $(this).parents('.full-story').find('.copy').hide('slow');
+                });
+            });
         }
     };
 

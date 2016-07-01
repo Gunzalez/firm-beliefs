@@ -696,13 +696,69 @@ h1 {
         min-height: 40px;
     }
 
-    .date {
+    .date, .category {
         font-size: 1.5rem;
+        display: block;
     }
 
     .news-item-story {
         margin: 20px 0 30px 0;
         @extend %bordered-bottom;
+    }
+
+    .news-item-meta {
+        position: relative;
+        min-height: 100px;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .meta {
+            margin-left: 90px;
+        }
+    }
+
+    .full-story {
+
+        &.open {
+
+            .controls {
+
+                a {
+                    &.show-story {
+                        display: none;
+                    }
+
+                    &.hide-story {
+                        display: block;
+                    }
+                }
+
+            }
+        }
+
+        .copy {
+            display: none;
+        }
+
+        .controls {
+            text-align: right;
+
+            a {
+                margin-bottom: 10px;
+
+                &.show-story {
+                    display: block;
+                }
+
+                &.hide-story {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
