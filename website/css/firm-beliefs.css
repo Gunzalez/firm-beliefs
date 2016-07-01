@@ -525,11 +525,20 @@ h1 a {
   .news-filter-container label {
     display: block; }
   .news-filter-container select {
-    padding: 4px 6px;
+    padding: 8px 60px 8px 12px;
     width: 100%;
     border: 1px solid #F48220;
     outline: none;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 0; }
+  .news-filter-container form {
+    position: relative; }
+    .news-filter-container form span {
+      position: absolute;
+      top: 38px;
+      right: 15px;
+      color: #F48220; }
   @media (max-width: 768px) {
     .news-filter-container {
       display: block; } }

@@ -616,11 +616,24 @@ h1 {
     }
 
     select {
-        padding: 4px 6px;
+        padding: 8px 60px 8px 12px;
         width: 100%;
         border: 1px solid $clr-primary-orange;
         outline: none;
         cursor: pointer;
+        -webkit-appearance: none;
+        border-radius: 0;
+    }
+
+    form {
+        position: relative;
+
+        span {
+            position: absolute;
+            top: 38px;
+            right: 15px;
+            color: $clr-primary-orange;
+        }
     }
 
     @media (max-width: $width-sm) {
