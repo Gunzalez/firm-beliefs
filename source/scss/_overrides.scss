@@ -45,9 +45,10 @@
             resize: none;
         }
 
-        input, textarea {
+        [type='text'], textarea {
             color: #000000;
             border: 1px solid lighten($clr-primary-grey, 20);
+            @include border-radius(0);
         }
 
         .error-message {
@@ -61,6 +62,7 @@
 
             input, textarea {
                 border-color: $clr-error;
+                @include border-radius(0);
             }
 
             .error-message {
@@ -90,8 +92,4 @@
     }
 }
 
-input, textarea {
-    -webkit-appearance: none;
-    border-radius: 0;
-    border: 1px solid $clr-primary-dark;
-}
+

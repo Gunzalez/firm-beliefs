@@ -54,9 +54,12 @@
 .page form textarea {
   resize: none; }
 
-.page form input, .page form textarea {
+.page form [type='text'], .page form textarea {
   color: #000000;
-  border: 1px solid #cfcfca; }
+  border: 1px solid #cfcfca;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
 
 .page form .error-message {
   padding: 2px 4px;
@@ -65,7 +68,10 @@
   display: none; }
 
 .page form .has-error input, .page form .has-error textarea {
-  border-color: #a94442; }
+  border-color: #a94442;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
 
 .page form .has-error .error-message {
   display: block; }
@@ -88,11 +94,6 @@
     border: none;
     padding: 2px 4px;
     line-height: 100%; } }
-
-input, textarea {
-  -webkit-appearance: none;
-  border-radius: 0;
-  border: 1px solid #363636; }
 
 body {
   background-color: #363636;
