@@ -52,59 +52,24 @@ if (typeof jQuery === 'undefined') {
                                 that.date = sys;
                             }
                             that.create('days');
-                        }).on('click', '.date, .pMDate, .nMDate', function () {
-                            var tClass = $(this).attr('class'),
-                                    sdate = $(this).text(),
-                                    cmonth = that.date.getMonth(),
-                                    cyear = that.date.getFullYear();
+                        }).on('click', '.event-day', function () {
 
-                            /* Calculate year */
-                            if (tClass === 'pMDate') {
-                                cyear = (cmonth === 0 ? cyear - 1 : cyear);
-                            }
-                            else if (tClass === 'nMDate') {
-                                cyear = (cmonth + 2 === 13 ? cyear + 1 : cyear);
-                            }
-                            /* Calculate month */
-                            if (tClass === 'pMDate') {
-                                cmonth = (cmonth === 0 ? '12' : cmonth);
-                            }
-                            else if (tClass === 'nMDate') {
-                                cmonth = (cmonth + 2 === 13 ? '1' : cmonth + 2);
-                            }
-                            else {
-                                cmonth = cmonth + 1;
-                            }
-
-                            // Selected date
-                            that.selected = cmonth + '/' + sdate + '/' + cyear;
-
-                            if (that.options.mode === 'datepicker') {
-                                that.calendar.find('td').removeClass('selected');
-                                $(this).addClass('selected');
-                            }
-                            selectDate();
-                            return true;
-                        }).on('click', '#currM', function () {
+                            // todo: Rob, you can do some ajax here
+                            // todo: or link to a new page
+                            console.log('Do ajax, or reload page .e.g firm-elite.php?eventsId='+$(this).attr('data-event-date'));
+                            alert('Do ajax, or reload page .e.g firm-elite.php?eventsId='+$(this).attr('data-event-date'));
                             //
-                            //that.viewMode = 'months';
-                            //that.create(that.viewMode);
                             //
-                        }).on('click', '.month', function (e) {
-                            that.viewMode = 'days';
-                            var curr = new Date(that.date), y = that.calendar.find('#currM').text();
-                            curr.setMonth($(e.currentTarget).attr('num'));
-                            that.date = curr;
-                            that.create(that.viewMode);
+                            //
+                            //
+                            //
+
                         });
 
                 function selectDate() {
                     var newDate = formatDate(that.options.format);
                     var e = $.Event('selectdate', {date: newDate});
                     that.calendar.trigger(e);
-
-
-                    alert('Todo: Rob does ajax for date: ' + newDate);
                 }
 
                 function formatDate(format) {
@@ -177,10 +142,21 @@ if (typeof jQuery === 'undefined') {
                                 && d.getFullYear() === that.today.getFullYear()) {
                             temp[dayOfWeek].attr('id', 'currDay');
                         }
-                        if (that.options.mode === 'datepicker'
-                                && (((d.getMonth() + 1) + "/" + day + "/" + d.getFullYear()) === (selDate[0] + "/" + selDate[1] + "/" + selDate[2]))) {
-                            temp[dayOfWeek].addClass('selected');
+
+                        // looks through dates supplied in HTML
+                        // then add class and data attr
+                        if(window.fbEvents){
+                            var eventDays = window.fbEvents.days,
+                                eventMonth = window.fbEvents.month,
+                                eventYear = window.fbEvents.year;
+                            if (eventDays.indexOf(day) != -1
+                                    && d.getMonth() === eventMonth
+                                    && d.getFullYear() === eventYear) {
+                                temp[dayOfWeek].attr('class', 'event-day');
+                                temp[dayOfWeek].attr('data-event-date', day);
+                            }
                         }
+
                         if (i === 1 && dayOfWeek === 0) {
                             break;
                         } else if (dayOfWeek < 6) {
@@ -254,7 +230,7 @@ if (typeof jQuery === 'undefined') {
                 tBody.append('<tr><td colspan="4" id="today">' + sysDate + '</td></tr>').appendTo(that.calendar);
             }
         }
-    }
+    };
 
     /* DEFINITION FOR DCALENDAR */
     $.fn.dcalendar = function (opts) {
@@ -268,11 +244,11 @@ if (typeof jQuery === 'undefined') {
             }
             if (typeof opts === 'string') data[opts]();
         });
-    }
+    };
 
     $.fn.dcalendar.defaults = {
         mode: 'calendar',
-        format: 'mm/dd/yyyy',
+        format: 'mm/dd/yyyy'
     };
 
     $.fn.dcalendar.Constructor = DCalendar;
@@ -287,7 +263,7 @@ if (typeof jQuery === 'undefined') {
                 position: 'absolute',
                 left: 0, display: 'none',
                 'box-shadow': '0 4px 6px 1px rgba(0, 0, 0, 0.14)',
-                width: '230px',
+                width: '230px'
             }).appendTo(that.parent());
             if (opts) {
                 opts.mode = 'datepicker';

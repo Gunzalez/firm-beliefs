@@ -52,32 +52,13 @@
     color: #AAA;
 }
 
-.calendar .date,
-.calendar .pMDate,
-.calendar .nMDate,
-.calendar .month {
+.calendar .event-day {
     cursor: pointer;
 }
 
 .calendar .pMDate,
 .calendar .nMDate {
     font-weight: 100;
-}
-
-
-.calendar .date:hover span,
-.calendar .pMDate:hover span,
-.calendar .nMDate:hover span,
-.calendar .month:hover span {
-    border-color: #ffffff;
-}
-
-.calendar .date:active span,
-.calendar .pMDate:active span,
-.calendar .nMDate:active span,
-.calendar .month:active span {
-    background-color: #F48220;
-    color: #FFF;
 }
 
 .calendar .selected {
@@ -89,19 +70,6 @@
     padding: 8px;
     font-size: 14px;
 }
-
-/*.calendar tr:first-child th {*/
-    /*cursor: pointer;*/
-    /*color: #000;*/
-/*}*/
-
-/*.calendar tr:first-child th:hover {*/
-    /*color: #F48220;*/
-/*}*/
-
-/*.calendar tr:first-child th:active {*/
-    /*color: #F48220;*/
-/*}*/
 
 .calendar thead tr:nth-child(2) th {
     color: #555;
@@ -122,11 +90,11 @@
     color: #F48220;
 }
 
-.calendar #currDay {
-    color: #F48220;
+.calendar #currDay span {
+    border-color: #ffffff;
 }
 
-.calendar #currDay span {
+.calendar .event-day span {
     border-color: #F48220;
 }
 

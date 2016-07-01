@@ -220,7 +220,6 @@
         if($calendar.length > 0){
             $calendar.dcalendar();
         }
-
         // all init
         firmBeliefs.environment.init();
         firmBeliefs.navigation.init();
