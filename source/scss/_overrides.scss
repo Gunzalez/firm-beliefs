@@ -37,18 +37,34 @@
     }
 }
 
+[type='text'],
+[type='email'],
+textarea,
+[type='text']:focus,
+[type='email']:focus,
+textarea:focus {
+    color: $clr-primary-dark;
+    border: 1px solid lighten($clr-primary-grey, 20) !important;
+    @include border-radius(0);
+}
+
+.has-error {
+
+    input, textarea {
+        border-color: $clr-error !important;
+    }
+
+    .error-message {
+        display: block;
+    }
+}
+
 .page {
 
     form {
 
         textarea {
             resize: none;
-        }
-
-        [type='text'], textarea {
-            color: #000000;
-            border: 1px solid lighten($clr-primary-grey, 20);
-            @include border-radius(0);
         }
 
         .error-message {
@@ -84,7 +100,6 @@
 
             textarea {
                 @include border-radius(0);
-                border: none;
                 padding: 2px 4px;
                 line-height: 100%;
             }
