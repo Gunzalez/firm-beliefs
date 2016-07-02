@@ -474,11 +474,35 @@ h1 {
             z-index: 2;
         }
 
+        .super-tag {
+            position: absolute;
+            margin-top: -60px;
+            margin-left: -120px;
+            text-transform: uppercase;
+            top: 50%;
+            left: 50%;
+            color: #ffffff;
+            background-color: $clr-primary-dark;
+            background-color: rgba(54, 54, 54, 0.50);
+            padding: 20px 30px;
+
+            * {
+                margin: 0;
+                padding: 3px 0;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+
         .tags {
             position: absolute;
             padding: 6px 10px;
             color: #ffffff;
             background: $clr-primary-dark;
+
+            strong {
+                font-weight: 700;
+            }
 
             p {
                 padding: 0;
@@ -488,7 +512,7 @@ h1 {
             // todo: decide when to make them vanish
             // depends on length of words, which you cannot predict
             // so I say do them as soon as less than max width
-            @media (max-width: $width-lg) {
+            @media (max-width: $width-md) {
                 display: none;
             }
         }

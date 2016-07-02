@@ -446,15 +446,33 @@ h1 a {
     .hero .hero-image.active {
       opacity: 1;
       z-index: 2; }
+    .hero .hero-image .super-tag {
+      position: absolute;
+      margin-top: -60px;
+      margin-left: -120px;
+      text-transform: uppercase;
+      top: 50%;
+      left: 50%;
+      color: #ffffff;
+      background-color: #363636;
+      background-color: rgba(54, 54, 54, 0.5);
+      padding: 20px 30px; }
+      .hero .hero-image .super-tag * {
+        margin: 0;
+        padding: 3px 0;
+        text-align: center;
+        font-weight: bold; }
     .hero .hero-image .tags {
       position: absolute;
       padding: 6px 10px;
       color: #ffffff;
       background: #363636; }
+      .hero .hero-image .tags strong {
+        font-weight: 700; }
       .hero .hero-image .tags p {
         padding: 0;
         margin: 0; }
-      @media (max-width: 1200px) {
+      @media (max-width: 992px) {
         .hero .hero-image .tags {
           display: none; } }
   .hero img {
