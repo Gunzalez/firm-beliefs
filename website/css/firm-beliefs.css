@@ -219,6 +219,9 @@ a {
   a:hover {
     color: #F48220;
     text-decoration: underline; }
+  a:focus, a:active {
+    color: #F48220;
+    text-decoration: none; }
   a.phone-link {
     color: #363636;
     cursor: text; }
@@ -433,6 +436,17 @@ h1 a {
     .hero .hero-image.active {
       opacity: 1;
       z-index: 2; }
+    .hero .hero-image .tags {
+      position: absolute;
+      padding: 6px 10px;
+      color: #ffffff;
+      background: #363636; }
+      .hero .hero-image .tags p {
+        padding: 0;
+        margin: 0; }
+      @media (max-width: 1200px) {
+        .hero .hero-image .tags {
+          display: none; } }
   .hero img {
     width: 100%; }
   .hero .hero-angled-top {

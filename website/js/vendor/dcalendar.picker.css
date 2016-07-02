@@ -95,7 +95,7 @@
 }
 
 .calendar .event-day span {
-    border-color: #F48220;
+    border-color: #F48220 !important;
 }
 
 /* not using */
