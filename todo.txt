@@ -1,9 +1,9 @@
 # Annoying dot on nav trigger
-Responsive everything
+# Responsive everything
 # Get fonts
-Delay carousel until images are loaded
-mobile-only links
+# mobile-only phone links (not everywhere)
 # Header and Purpose alignment *
-Back To Top *
-User AGent tweaks to form fields
-See about Who We Are image sizing
+# Back To Top *
+# See about Who We Are image sizing
+Delay carousel until images are loaded
+User Agent tweaks to form fields
