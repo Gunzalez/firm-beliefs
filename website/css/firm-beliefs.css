@@ -181,6 +181,10 @@ h2 {
     h2 {
       font-size: 4.0rem;
       padding-bottom: 30px; } }
+  @media (max-width: 992px) {
+    h2 {
+      font-size: 4.0rem;
+      padding-bottom: 20px; } }
 
 h3, h4, h5, h6 {
   font-weight: 400;
@@ -293,6 +297,12 @@ h1 a {
     .contact-nav a.email {
       background: url("../images/icon-bars.png") left center no-repeat;
       padding-left: 20px; }
+
+@media (max-width: 992px) {
+  .content-copy {
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #363636;
+    margin-bottom: 30px; } }
 
 .calendar-container {
   padding: 5px 0;

@@ -10,6 +10,8 @@ Responsive, 14th                        4hrs
 More responsive, 15th                   4hrs
 Finishes responsive homepage 20th       2hrs
 Starts inner pages 20th                 2hrs
+Charities, Enterprises,
+Legal Services, Profiles                5hrs
 Completes Elite, refactors              4hrs
 Hack calendar for pre-setting events    1hr
 News page container                     3hrs
