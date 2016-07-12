@@ -17,3 +17,5 @@ Hack calendar for pre-setting events    1hr
 News page container                     3hrs
 Hacking calendar plugin                 1hr
 Completes site build                    5hrs
+
+Total time 62 hours (on estimated 32 hr job)
